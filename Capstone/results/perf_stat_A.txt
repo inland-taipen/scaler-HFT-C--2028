@@ -1,15 +1,55 @@
+impl=A runs=5
+  ns/add    225.6
+  ns/cancel 418.0
+  ns/bbo    32.9
+  ns/depth  433.6
+  final bid: has=1 px=9999 qty=2668
+  final ask: has=1 px=10001 qty=2486
+  checksum 483587156
+impl=A runs=5
+  ns/add    200.5
+  ns/cancel 371.7
+  ns/bbo    32.4
+  ns/depth  406.5
+  final bid: has=1 px=9999 qty=2668
+  final ask: has=1 px=10001 qty=2486
+  checksum 483587156
+impl=A runs=5
+  ns/add    224.7
+  ns/cancel 437.5
+  ns/bbo    33.3
+  ns/depth  448.0
+  final bid: has=1 px=9999 qty=2668
+  final ask: has=1 px=10001 qty=2486
+  checksum 483587156
+impl=A runs=5
+  ns/add    233.0
+  ns/cancel 398.6
+  ns/bbo    34.9
+  ns/depth  463.2
+  final bid: has=1 px=9999 qty=2668
+  final ask: has=1 px=10001 qty=2486
+  checksum 483587156
+impl=A runs=5
+  ns/add    198.1
+  ns/cancel 376.8
+  ns/bbo    32.3
+  ns/depth  418.6
+  final bid: has=1 px=9999 qty=2668
+  final ask: has=1 px=10001 qty=2486
+  checksum 483587156
 
  Performance counter stats for './build/bench --impl A' (5 runs):
 
-            838.10 msec task-clock                #    0.939 CPUs utilized            ( +-  4.45% )
-   <not supported>      cycles                                                      
-   <not supported>      instructions                                                
-   <not supported>      branches                                                    
-   <not supported>      branch-misses                                               
-   <not supported>      cache-misses                                                
-   <not supported>      L1-dcache-load-misses                                       
-   <not supported>      dTLB-load-misses                                            
-              7032      page-faults               #    7.886 K/sec                    ( +-  1.78% )
+           1494.64 msec task-clock                       #    0.985 CPUs utilized               ( +-  1.31% )
+   <not supported>      cycles                                                                
+   <not supported>      instructions                                                          
+   <not supported>      branches                                                              
+   <not supported>      branch-misses                                                         
+   <not supported>      cache-misses                                                          
+   <not supported>      L1-dcache-load-misses                                                 
+   <not supported>      dTLB-load-misses                                                      
+             16715      page-faults                      #   11.183 K/sec                       ( +-  0.00% )
 
-            0.8926 +- 0.0373 seconds time elapsed  ( +-  4.18% )
+            1.5170 +- 0.0236 seconds time elapsed  ( +-  1.56% )
 

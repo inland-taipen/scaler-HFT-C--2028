@@ -1,4 +1,4 @@
-#include "main_ob/types.hpp"
+#include "types.hpp"
 #include <cstdio>
 
 int main() {
