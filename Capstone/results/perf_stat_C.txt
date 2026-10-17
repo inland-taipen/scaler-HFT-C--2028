@@ -1,0 +1,15 @@
+
+ Performance counter stats for './build/bench --impl C' (5 runs):
+
+            316.24 msec task-clock                #    0.985 CPUs utilized            ( +-  2.16% )
+   <not supported>      cycles                                                      
+   <not supported>      instructions                                                
+   <not supported>      branches                                                    
+   <not supported>      branch-misses                                               
+   <not supported>      cache-misses                                                
+   <not supported>      L1-dcache-load-misses                                       
+   <not supported>      dTLB-load-misses                                            
+             10161      page-faults               #   31.721 K/sec                    ( +-  3.06% )
+
+           0.32112 +- 0.00685 seconds time elapsed  ( +-  2.13% )
+

@@ -1,0 +1,1935 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 774  of event 'cpu-clock:pppH'
+# Event count (approx.): 193500000
+#
+# Children      Self  Command  Shared Object          Symbol                            
+# ........  ........  .......  .....................  ..................................
+#
+    99.74%     0.00%  bench    bench                  [.] 0x0000aaaacecf1670
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               |          
+               |--97.03%--0xaaaacecf15a4
+               |          0xaaaacecf780c
+               |          |          
+               |          |--39.79%--0xaaaacecf759c
+               |          |          |          
+               |          |          |--10.34%--0xaaaacecf6578
+               |          |          |          |          
+               |          |          |          |--3.88%--0xaaaacecf6434
+               |          |          |          |          0xffff976a343c
+               |          |          |          |          |          
+               |          |          |          |           --2.58%--0xffff974e0754
+               |          |          |          |                     |          
+               |          |          |          |                      --0.78%--0xffff974dfcd0
+               |          |          |          |                                el0t_64_sync
+               |          |          |          |                                el0t_64_sync_handler
+               |          |          |          |                                el0_da
+               |          |          |          |                                do_mem_abort
+               |          |          |          |                                do_translation_fault
+               |          |          |          |                                do_page_fault
+               |          |          |          |                                handle_mm_fault
+               |          |          |          |                                __handle_mm_fault
+               |          |          |          |                                |          
+               |          |          |          |                                 --0.65%--vma_alloc_zeroed_movable_folio
+               |          |          |          |                                           __folio_alloc_noprof
+               |          |          |          |                                           __alloc_pages_noprof
+               |          |          |          |                                           __pi_clear_page
+               |          |          |          |          
+               |          |          |           --3.36%--0xaaaacecf64b8
+               |          |          |                     |          
+               |          |          |                     |--1.55%--0xaaaacecf62a8
+               |          |          |                     |          
+               |          |          |                     |--1.29%--0xaaaacecf62fc
+               |          |          |                     |          
+               |          |          |                      --0.52%--0xffff974ec0d0
+               |          |          |                                el0t_64_sync
+               |          |          |                                el0t_64_sync_handler
+               |          |          |                                el0_da
+               |          |          |                                do_mem_abort
+               |          |          |                                do_translation_fault
+               |          |          |                                do_page_fault
+               |          |          |                                handle_mm_fault
+               |          |          |          
+               |          |          |--6.85%--0xaaaacecf6670
+               |          |          |          
+               |          |          |--5.30%--0xaaaacecf65f8
+               |          |          |          
+               |          |          |--5.04%--0xaaaacecf65cc
+               |          |          |          
+               |          |          |--2.84%--0xaaaacecf669c
+               |          |          |          
+               |          |          |--1.68%--0xaaaacecf65c8
+               |          |          |          |          
+               |          |          |           --1.03%--0xffff974ead6c
+               |          |          |          
+               |          |          |--0.90%--0xaaaacecf6618
+               |          |          |          
+               |          |          |--0.78%--0xaaaacecf667c
+               |          |          |          
+               |          |          |--0.78%--0xaaaacecf6640
+               |          |          |          |          
+               |          |          |           --0.52%--0xffff974ead6c
+               |          |          |          
+               |          |          |--0.78%--0xaaaacecf6600
+               |          |          |          
+               |          |          |--0.78%--0xaaaacecf65a0
+               |          |          |          
+               |          |          |--0.65%--0xaaaacecf65d8
+               |          |          |          
+               |          |          |--0.65%--0xaaaacecf6588
+               |          |          |          
+               |          |          |--0.52%--0xaaaacecf6690
+               |          |          |          
+               |          |           --0.52%--0xaaaacecf65ec
+               |          |          
+               |          |--21.06%--0xaaaacecf7240
+               |          |          |          
+               |          |          |--4.26%--0xaaaacecf2320
+               |          |          |          
+               |          |          |--4.13%--0xaaaacecf2338
+               |          |          |          
+               |          |          |--2.97%--0xaaaacecf2364
+               |          |          |          
+               |          |          |--2.58%--0xaaaacecf23e0
+               |          |          |          
+               |          |          |--2.33%--0xaaaacecf240c
+               |          |          |          
+               |          |          |--1.55%--0xaaaacecf23c8
+               |          |          |          
+               |          |          |--0.65%--0xaaaacecf2400
+               |          |          |          
+               |          |           --0.52%--0xaaaacecf2430
+               |          |                     0xffff974eac8c
+               |          |          
+               |          |--13.70%--0xaaaacecf7244
+               |          |          |          
+               |          |          |--12.92%--0xffff976c7c6c
+               |          |          |          __kernel_clock_gettime
+               |          |          |          
+               |          |           --0.65%--0xffff9769a354
+               |          |          
+               |          |--10.21%--0xaaaacecf7210
+               |          |          |          
+               |          |           --9.69%--0xffff976c7c6c
+               |          |                     __kernel_clock_gettime
+               |          |          
+               |          |--4.01%--0xaaaacecf7348
+               |          |          |          
+               |          |           --2.97%--0xffff974e0bd4
+               |          |                     |          
+               |          |                      --0.65%--0xffff974ddf98
+               |          |          
+               |          |--3.36%--0xaaaacecf7378
+               |          |          0xffff974e0bd4
+               |          |          0xffff974de61c
+               |          |          |          
+               |          |          |--0.78%--0xffff974dcf08
+               |          |          |          
+               |          |           --0.65%--0xffff974dce98
+               |          |          
+               |          |--1.03%--0xaaaacecf7228
+               |          |          
+               |          |--0.78%--0xaaaacecf738c
+               |          |          0xffff974e0bd4
+               |          |          0xffff974de61c
+               |          |          
+               |           --0.65%--0xaaaacecf7464
+               |          
+                --2.71%--0xaaaacecf141c
+                          |          
+                           --0.78%--0xaaaacecf8cc8
+
+    99.74%     0.00%  bench     (deleted)             [.] 0x0000ffff974774d8
+            |
+            ---0xffff974774d8
+               0xffff97477400
+               |          
+               |--97.03%--0xaaaacecf15a4
+               |          0xaaaacecf780c
+               |          |          
+               |          |--39.79%--0xaaaacecf759c
+               |          |          |          
+               |          |          |--10.34%--0xaaaacecf6578
+               |          |          |          |          
+               |          |          |          |--3.88%--0xaaaacecf6434
+               |          |          |          |          0xffff976a343c
+               |          |          |          |          |          
+               |          |          |          |           --2.58%--0xffff974e0754
+               |          |          |          |                     |          
+               |          |          |          |                      --0.78%--0xffff974dfcd0
+               |          |          |          |                                el0t_64_sync
+               |          |          |          |                                el0t_64_sync_handler
+               |          |          |          |                                el0_da
+               |          |          |          |                                do_mem_abort
+               |          |          |          |                                do_translation_fault
+               |          |          |          |                                do_page_fault
+               |          |          |          |                                handle_mm_fault
+               |          |          |          |                                __handle_mm_fault
+               |          |          |          |                                |          
+               |          |          |          |                                 --0.65%--vma_alloc_zeroed_movable_folio
+               |          |          |          |                                           __folio_alloc_noprof
+               |          |          |          |                                           __alloc_pages_noprof
+               |          |          |          |                                           __pi_clear_page
+               |          |          |          |          
+               |          |          |           --3.36%--0xaaaacecf64b8
+               |          |          |                     |          
+               |          |          |                     |--1.55%--0xaaaacecf62a8
+               |          |          |                     |          
+               |          |          |                     |--1.29%--0xaaaacecf62fc
+               |          |          |                     |          
+               |          |          |                      --0.52%--0xffff974ec0d0
+               |          |          |                                el0t_64_sync
+               |          |          |                                el0t_64_sync_handler
+               |          |          |                                el0_da
+               |          |          |                                do_mem_abort
+               |          |          |                                do_translation_fault
+               |          |          |                                do_page_fault
+               |          |          |                                handle_mm_fault
+               |          |          |          
+               |          |          |--6.85%--0xaaaacecf6670
+               |          |          |          
+               |          |          |--5.30%--0xaaaacecf65f8
+               |          |          |          
+               |          |          |--5.04%--0xaaaacecf65cc
+               |          |          |          
+               |          |          |--2.84%--0xaaaacecf669c
+               |          |          |          
+               |          |          |--1.68%--0xaaaacecf65c8
+               |          |          |          |          
+               |          |          |           --1.03%--0xffff974ead6c
+               |          |          |          
+               |          |          |--0.90%--0xaaaacecf6618
+               |          |          |          
+               |          |          |--0.78%--0xaaaacecf667c
+               |          |          |          
+               |          |          |--0.78%--0xaaaacecf6640
+               |          |          |          |          
+               |          |          |           --0.52%--0xffff974ead6c
+               |          |          |          
+               |          |          |--0.78%--0xaaaacecf6600
+               |          |          |          
+               |          |          |--0.78%--0xaaaacecf65a0
+               |          |          |          
+               |          |          |--0.65%--0xaaaacecf65d8
+               |          |          |          
+               |          |          |--0.65%--0xaaaacecf6588
+               |          |          |          
+               |          |          |--0.52%--0xaaaacecf6690
+               |          |          |          
+               |          |           --0.52%--0xaaaacecf65ec
+               |          |          
+               |          |--21.06%--0xaaaacecf7240
+               |          |          |          
+               |          |          |--4.26%--0xaaaacecf2320
+               |          |          |          
+               |          |          |--4.13%--0xaaaacecf2338
+               |          |          |          
+               |          |          |--2.97%--0xaaaacecf2364
+               |          |          |          
+               |          |          |--2.58%--0xaaaacecf23e0
+               |          |          |          
+               |          |          |--2.33%--0xaaaacecf240c
+               |          |          |          
+               |          |          |--1.55%--0xaaaacecf23c8
+               |          |          |          
+               |          |          |--0.65%--0xaaaacecf2400
+               |          |          |          
+               |          |           --0.52%--0xaaaacecf2430
+               |          |                     0xffff974eac8c
+               |          |          
+               |          |--13.70%--0xaaaacecf7244
+               |          |          |          
+               |          |          |--12.92%--0xffff976c7c6c
+               |          |          |          __kernel_clock_gettime
+               |          |          |          
+               |          |           --0.65%--0xffff9769a354
+               |          |          
+               |          |--10.21%--0xaaaacecf7210
+               |          |          |          
+               |          |           --9.69%--0xffff976c7c6c
+               |          |                     __kernel_clock_gettime
+               |          |          
+               |          |--4.01%--0xaaaacecf7348
+               |          |          |          
+               |          |           --2.97%--0xffff974e0bd4
+               |          |                     |          
+               |          |                      --0.65%--0xffff974ddf98
+               |          |          
+               |          |--3.36%--0xaaaacecf7378
+               |          |          0xffff974e0bd4
+               |          |          0xffff974de61c
+               |          |          |          
+               |          |          |--0.78%--0xffff974dcf08
+               |          |          |          
+               |          |           --0.65%--0xffff974dce98
+               |          |          
+               |          |--1.03%--0xaaaacecf7228
+               |          |          
+               |          |--0.78%--0xaaaacecf738c
+               |          |          0xffff974e0bd4
+               |          |          0xffff974de61c
+               |          |          
+               |           --0.65%--0xaaaacecf7464
+               |          
+                --2.71%--0xaaaacecf141c
+                          |          
+                           --0.78%--0xaaaacecf8cc8
+
+    99.74%     0.00%  bench     (deleted)             [.] 0x0000ffff97477400
+            |
+            ---0xffff97477400
+               |          
+               |--97.03%--0xaaaacecf15a4
+               |          0xaaaacecf780c
+               |          |          
+               |          |--39.79%--0xaaaacecf759c
+               |          |          |          
+               |          |          |--10.34%--0xaaaacecf6578
+               |          |          |          |          
+               |          |          |          |--3.88%--0xaaaacecf6434
+               |          |          |          |          0xffff976a343c
+               |          |          |          |          |          
+               |          |          |          |           --2.58%--0xffff974e0754
+               |          |          |          |                     |          
+               |          |          |          |                      --0.78%--0xffff974dfcd0
+               |          |          |          |                                el0t_64_sync
+               |          |          |          |                                el0t_64_sync_handler
+               |          |          |          |                                el0_da
+               |          |          |          |                                do_mem_abort
+               |          |          |          |                                do_translation_fault
+               |          |          |          |                                do_page_fault
+               |          |          |          |                                handle_mm_fault
+               |          |          |          |                                __handle_mm_fault
+               |          |          |          |                                |          
+               |          |          |          |                                 --0.65%--vma_alloc_zeroed_movable_folio
+               |          |          |          |                                           __folio_alloc_noprof
+               |          |          |          |                                           __alloc_pages_noprof
+               |          |          |          |                                           __pi_clear_page
+               |          |          |          |          
+               |          |          |           --3.36%--0xaaaacecf64b8
+               |          |          |                     |          
+               |          |          |                     |--1.55%--0xaaaacecf62a8
+               |          |          |                     |          
+               |          |          |                     |--1.29%--0xaaaacecf62fc
+               |          |          |                     |          
+               |          |          |                      --0.52%--0xffff974ec0d0
+               |          |          |                                el0t_64_sync
+               |          |          |                                el0t_64_sync_handler
+               |          |          |                                el0_da
+               |          |          |                                do_mem_abort
+               |          |          |                                do_translation_fault
+               |          |          |                                do_page_fault
+               |          |          |                                handle_mm_fault
+               |          |          |          
+               |          |          |--6.85%--0xaaaacecf6670
+               |          |          |          
+               |          |          |--5.30%--0xaaaacecf65f8
+               |          |          |          
+               |          |          |--5.04%--0xaaaacecf65cc
+               |          |          |          
+               |          |          |--2.84%--0xaaaacecf669c
+               |          |          |          
+               |          |          |--1.68%--0xaaaacecf65c8
+               |          |          |          |          
+               |          |          |           --1.03%--0xffff974ead6c
+               |          |          |          
+               |          |          |--0.90%--0xaaaacecf6618
+               |          |          |          
+               |          |          |--0.78%--0xaaaacecf667c
+               |          |          |          
+               |          |          |--0.78%--0xaaaacecf6640
+               |          |          |          |          
+               |          |          |           --0.52%--0xffff974ead6c
+               |          |          |          
+               |          |          |--0.78%--0xaaaacecf6600
+               |          |          |          
+               |          |          |--0.78%--0xaaaacecf65a0
+               |          |          |          
+               |          |          |--0.65%--0xaaaacecf65d8
+               |          |          |          
+               |          |          |--0.65%--0xaaaacecf6588
+               |          |          |          
+               |          |          |--0.52%--0xaaaacecf6690
+               |          |          |          
+               |          |           --0.52%--0xaaaacecf65ec
+               |          |          
+               |          |--21.06%--0xaaaacecf7240
+               |          |          |          
+               |          |          |--4.26%--0xaaaacecf2320
+               |          |          |          
+               |          |          |--4.13%--0xaaaacecf2338
+               |          |          |          
+               |          |          |--2.97%--0xaaaacecf2364
+               |          |          |          
+               |          |          |--2.58%--0xaaaacecf23e0
+               |          |          |          
+               |          |          |--2.33%--0xaaaacecf240c
+               |          |          |          
+               |          |          |--1.55%--0xaaaacecf23c8
+               |          |          |          
+               |          |          |--0.65%--0xaaaacecf2400
+               |          |          |          
+               |          |           --0.52%--0xaaaacecf2430
+               |          |                     0xffff974eac8c
+               |          |          
+               |          |--13.70%--0xaaaacecf7244
+               |          |          |          
+               |          |          |--12.92%--0xffff976c7c6c
+               |          |          |          __kernel_clock_gettime
+               |          |          |          
+               |          |           --0.65%--0xffff9769a354
+               |          |          
+               |          |--10.21%--0xaaaacecf7210
+               |          |          |          
+               |          |           --9.69%--0xffff976c7c6c
+               |          |                     __kernel_clock_gettime
+               |          |          
+               |          |--4.01%--0xaaaacecf7348
+               |          |          |          
+               |          |           --2.97%--0xffff974e0bd4
+               |          |                     |          
+               |          |                      --0.65%--0xffff974ddf98
+               |          |          
+               |          |--3.36%--0xaaaacecf7378
+               |          |          0xffff974e0bd4
+               |          |          0xffff974de61c
+               |          |          |          
+               |          |          |--0.78%--0xffff974dcf08
+               |          |          |          
+               |          |           --0.65%--0xffff974dce98
+               |          |          
+               |          |--1.03%--0xaaaacecf7228
+               |          |          
+               |          |--0.78%--0xaaaacecf738c
+               |          |          0xffff974e0bd4
+               |          |          0xffff974de61c
+               |          |          
+               |           --0.65%--0xaaaacecf7464
+               |          
+                --2.71%--0xaaaacecf141c
+                          |          
+                           --0.78%--0xaaaacecf8cc8
+
+    97.03%     0.00%  bench    bench                  [.] 0x0000aaaacecf15a4
+            |
+            ---0xaaaacecf15a4
+               0xaaaacecf780c
+               |          
+               |--39.79%--0xaaaacecf759c
+               |          |          
+               |          |--10.34%--0xaaaacecf6578
+               |          |          |          
+               |          |          |--3.88%--0xaaaacecf6434
+               |          |          |          0xffff976a343c
+               |          |          |          |          
+               |          |          |           --2.58%--0xffff974e0754
+               |          |          |                     |          
+               |          |          |                      --0.78%--0xffff974dfcd0
+               |          |          |                                el0t_64_sync
+               |          |          |                                el0t_64_sync_handler
+               |          |          |                                el0_da
+               |          |          |                                do_mem_abort
+               |          |          |                                do_translation_fault
+               |          |          |                                do_page_fault
+               |          |          |                                handle_mm_fault
+               |          |          |                                __handle_mm_fault
+               |          |          |                                |          
+               |          |          |                                 --0.65%--vma_alloc_zeroed_movable_folio
+               |          |          |                                           __folio_alloc_noprof
+               |          |          |                                           __alloc_pages_noprof
+               |          |          |                                           __pi_clear_page
+               |          |          |          
+               |          |           --3.36%--0xaaaacecf64b8
+               |          |                     |          
+               |          |                     |--1.55%--0xaaaacecf62a8
+               |          |                     |          
+               |          |                     |--1.29%--0xaaaacecf62fc
+               |          |                     |          
+               |          |                      --0.52%--0xffff974ec0d0
+               |          |                                el0t_64_sync
+               |          |                                el0t_64_sync_handler
+               |          |                                el0_da
+               |          |                                do_mem_abort
+               |          |                                do_translation_fault
+               |          |                                do_page_fault
+               |          |                                handle_mm_fault
+               |          |          
+               |          |--6.85%--0xaaaacecf6670
+               |          |          
+               |          |--5.30%--0xaaaacecf65f8
+               |          |          
+               |          |--5.04%--0xaaaacecf65cc
+               |          |          
+               |          |--2.84%--0xaaaacecf669c
+               |          |          
+               |          |--1.68%--0xaaaacecf65c8
+               |          |          |          
+               |          |           --1.03%--0xffff974ead6c
+               |          |          
+               |          |--0.90%--0xaaaacecf6618
+               |          |          
+               |          |--0.78%--0xaaaacecf667c
+               |          |          
+               |          |--0.78%--0xaaaacecf6640
+               |          |          |          
+               |          |           --0.52%--0xffff974ead6c
+               |          |          
+               |          |--0.78%--0xaaaacecf6600
+               |          |          
+               |          |--0.78%--0xaaaacecf65a0
+               |          |          
+               |          |--0.65%--0xaaaacecf65d8
+               |          |          
+               |          |--0.65%--0xaaaacecf6588
+               |          |          
+               |          |--0.52%--0xaaaacecf6690
+               |          |          
+               |           --0.52%--0xaaaacecf65ec
+               |          
+               |--21.06%--0xaaaacecf7240
+               |          |          
+               |          |--4.26%--0xaaaacecf2320
+               |          |          
+               |          |--4.13%--0xaaaacecf2338
+               |          |          
+               |          |--2.97%--0xaaaacecf2364
+               |          |          
+               |          |--2.58%--0xaaaacecf23e0
+               |          |          
+               |          |--2.33%--0xaaaacecf240c
+               |          |          
+               |          |--1.55%--0xaaaacecf23c8
+               |          |          
+               |          |--0.65%--0xaaaacecf2400
+               |          |          
+               |           --0.52%--0xaaaacecf2430
+               |                     0xffff974eac8c
+               |          
+               |--13.70%--0xaaaacecf7244
+               |          |          
+               |          |--12.92%--0xffff976c7c6c
+               |          |          __kernel_clock_gettime
+               |          |          
+               |           --0.65%--0xffff9769a354
+               |          
+               |--10.21%--0xaaaacecf7210
+               |          |          
+               |           --9.69%--0xffff976c7c6c
+               |                     __kernel_clock_gettime
+               |          
+               |--4.01%--0xaaaacecf7348
+               |          |          
+               |           --2.97%--0xffff974e0bd4
+               |                     |          
+               |                      --0.65%--0xffff974ddf98
+               |          
+               |--3.36%--0xaaaacecf7378
+               |          0xffff974e0bd4
+               |          0xffff974de61c
+               |          |          
+               |          |--0.78%--0xffff974dcf08
+               |          |          
+               |           --0.65%--0xffff974dce98
+               |          
+               |--1.03%--0xaaaacecf7228
+               |          
+               |--0.78%--0xaaaacecf738c
+               |          0xffff974e0bd4
+               |          0xffff974de61c
+               |          
+                --0.65%--0xaaaacecf7464
+
+    97.03%     0.00%  bench    bench                  [.] 0x0000aaaacecf780c
+            |
+            ---0xaaaacecf780c
+               |          
+               |--39.79%--0xaaaacecf759c
+               |          |          
+               |          |--10.34%--0xaaaacecf6578
+               |          |          |          
+               |          |          |--3.88%--0xaaaacecf6434
+               |          |          |          0xffff976a343c
+               |          |          |          |          
+               |          |          |           --2.58%--0xffff974e0754
+               |          |          |                     |          
+               |          |          |                      --0.78%--0xffff974dfcd0
+               |          |          |                                el0t_64_sync
+               |          |          |                                el0t_64_sync_handler
+               |          |          |                                el0_da
+               |          |          |                                do_mem_abort
+               |          |          |                                do_translation_fault
+               |          |          |                                do_page_fault
+               |          |          |                                handle_mm_fault
+               |          |          |                                __handle_mm_fault
+               |          |          |                                |          
+               |          |          |                                 --0.65%--vma_alloc_zeroed_movable_folio
+               |          |          |                                           __folio_alloc_noprof
+               |          |          |                                           __alloc_pages_noprof
+               |          |          |                                           __pi_clear_page
+               |          |          |          
+               |          |           --3.36%--0xaaaacecf64b8
+               |          |                     |          
+               |          |                     |--1.55%--0xaaaacecf62a8
+               |          |                     |          
+               |          |                     |--1.29%--0xaaaacecf62fc
+               |          |                     |          
+               |          |                      --0.52%--0xffff974ec0d0
+               |          |                                el0t_64_sync
+               |          |                                el0t_64_sync_handler
+               |          |                                el0_da
+               |          |                                do_mem_abort
+               |          |                                do_translation_fault
+               |          |                                do_page_fault
+               |          |                                handle_mm_fault
+               |          |          
+               |          |--6.85%--0xaaaacecf6670
+               |          |          
+               |          |--5.30%--0xaaaacecf65f8
+               |          |          
+               |          |--5.04%--0xaaaacecf65cc
+               |          |          
+               |          |--2.84%--0xaaaacecf669c
+               |          |          
+               |          |--1.68%--0xaaaacecf65c8
+               |          |          |          
+               |          |           --1.03%--0xffff974ead6c
+               |          |          
+               |          |--0.90%--0xaaaacecf6618
+               |          |          
+               |          |--0.78%--0xaaaacecf667c
+               |          |          
+               |          |--0.78%--0xaaaacecf6640
+               |          |          |          
+               |          |           --0.52%--0xffff974ead6c
+               |          |          
+               |          |--0.78%--0xaaaacecf6600
+               |          |          
+               |          |--0.78%--0xaaaacecf65a0
+               |          |          
+               |          |--0.65%--0xaaaacecf65d8
+               |          |          
+               |          |--0.65%--0xaaaacecf6588
+               |          |          
+               |          |--0.52%--0xaaaacecf6690
+               |          |          
+               |           --0.52%--0xaaaacecf65ec
+               |          
+               |--21.06%--0xaaaacecf7240
+               |          |          
+               |          |--4.26%--0xaaaacecf2320
+               |          |          
+               |          |--4.13%--0xaaaacecf2338
+               |          |          
+               |          |--2.97%--0xaaaacecf2364
+               |          |          
+               |          |--2.58%--0xaaaacecf23e0
+               |          |          
+               |          |--2.33%--0xaaaacecf240c
+               |          |          
+               |          |--1.55%--0xaaaacecf23c8
+               |          |          
+               |          |--0.65%--0xaaaacecf2400
+               |          |          
+               |           --0.52%--0xaaaacecf2430
+               |                     0xffff974eac8c
+               |          
+               |--13.70%--0xaaaacecf7244
+               |          |          
+               |          |--12.92%--0xffff976c7c6c
+               |          |          __kernel_clock_gettime
+               |          |          
+               |           --0.65%--0xffff9769a354
+               |          
+               |--10.21%--0xaaaacecf7210
+               |          |          
+               |           --9.69%--0xffff976c7c6c
+               |                     __kernel_clock_gettime
+               |          
+               |--4.01%--0xaaaacecf7348
+               |          |          
+               |           --2.97%--0xffff974e0bd4
+               |                     |          
+               |                      --0.65%--0xffff974ddf98
+               |          
+               |--3.36%--0xaaaacecf7378
+               |          0xffff974e0bd4
+               |          0xffff974de61c
+               |          |          
+               |          |--0.78%--0xffff974dcf08
+               |          |          
+               |           --0.65%--0xffff974dce98
+               |          
+               |--1.03%--0xaaaacecf7228
+               |          
+               |--0.78%--0xaaaacecf738c
+               |          0xffff974e0bd4
+               |          0xffff974de61c
+               |          
+                --0.65%--0xaaaacecf7464
+
+    39.79%     0.00%  bench    bench                  [.] 0x0000aaaacecf759c
+            |
+            ---0xaaaacecf759c
+               |          
+               |--10.34%--0xaaaacecf6578
+               |          |          
+               |          |--3.88%--0xaaaacecf6434
+               |          |          0xffff976a343c
+               |          |          |          
+               |          |           --2.58%--0xffff974e0754
+               |          |                     |          
+               |          |                      --0.78%--0xffff974dfcd0
+               |          |                                el0t_64_sync
+               |          |                                el0t_64_sync_handler
+               |          |                                el0_da
+               |          |                                do_mem_abort
+               |          |                                do_translation_fault
+               |          |                                do_page_fault
+               |          |                                handle_mm_fault
+               |          |                                __handle_mm_fault
+               |          |                                |          
+               |          |                                 --0.65%--vma_alloc_zeroed_movable_folio
+               |          |                                           __folio_alloc_noprof
+               |          |                                           __alloc_pages_noprof
+               |          |                                           __pi_clear_page
+               |          |          
+               |           --3.36%--0xaaaacecf64b8
+               |                     |          
+               |                     |--1.55%--0xaaaacecf62a8
+               |                     |          
+               |                     |--1.29%--0xaaaacecf62fc
+               |                     |          
+               |                      --0.52%--0xffff974ec0d0
+               |                                el0t_64_sync
+               |                                el0t_64_sync_handler
+               |                                el0_da
+               |                                do_mem_abort
+               |                                do_translation_fault
+               |                                do_page_fault
+               |                                handle_mm_fault
+               |          
+               |--6.85%--0xaaaacecf6670
+               |          
+               |--5.30%--0xaaaacecf65f8
+               |          
+               |--5.04%--0xaaaacecf65cc
+               |          
+               |--2.84%--0xaaaacecf669c
+               |          
+               |--1.68%--0xaaaacecf65c8
+               |          |          
+               |           --1.03%--0xffff974ead6c
+               |          
+               |--0.90%--0xaaaacecf6618
+               |          
+               |--0.78%--0xaaaacecf667c
+               |          
+               |--0.78%--0xaaaacecf6640
+               |          |          
+               |           --0.52%--0xffff974ead6c
+               |          
+               |--0.78%--0xaaaacecf6600
+               |          
+               |--0.78%--0xaaaacecf65a0
+               |          
+               |--0.65%--0xaaaacecf65d8
+               |          
+               |--0.65%--0xaaaacecf6588
+               |          
+               |--0.52%--0xaaaacecf6690
+               |          
+                --0.52%--0xaaaacecf65ec
+
+    22.61%     0.00%  bench     (deleted)             [.] 0x0000ffff976c7c6c
+            |
+            ---0xffff976c7c6c
+               __kernel_clock_gettime
+
+    22.61%    22.48%  bench    [vdso]                 [.] __kernel_clock_gettime
+            |          
+             --22.48%--0xaaaacecf1670
+                       0xffff974774d8
+                       0xffff97477400
+                       0xaaaacecf15a4
+                       0xaaaacecf780c
+                       |          
+                       |--12.79%--0xaaaacecf7244
+                       |          0xffff976c7c6c
+                       |          __kernel_clock_gettime
+                       |          
+                        --9.69%--0xaaaacecf7210
+                                  0xffff976c7c6c
+                                  __kernel_clock_gettime
+
+    21.06%     0.00%  bench    bench                  [.] 0x0000aaaacecf7240
+            |
+            ---0xaaaacecf7240
+               |          
+               |--4.26%--0xaaaacecf2320
+               |          
+               |--4.13%--0xaaaacecf2338
+               |          
+               |--2.97%--0xaaaacecf2364
+               |          
+               |--2.58%--0xaaaacecf23e0
+               |          
+               |--2.33%--0xaaaacecf240c
+               |          
+               |--1.55%--0xaaaacecf23c8
+               |          
+               |--0.65%--0xaaaacecf2400
+               |          
+                --0.52%--0xaaaacecf2430
+                          0xffff974eac8c
+
+    13.70%     0.00%  bench    bench                  [.] 0x0000aaaacecf7244
+            |
+            ---0xaaaacecf7244
+               |          
+               |--12.92%--0xffff976c7c6c
+               |          __kernel_clock_gettime
+               |          
+                --0.65%--0xffff9769a354
+
+    10.34%     0.00%  bench    bench                  [.] 0x0000aaaacecf6578
+            |
+            ---0xaaaacecf6578
+               |          
+               |--3.88%--0xaaaacecf6434
+               |          0xffff976a343c
+               |          |          
+               |           --2.58%--0xffff974e0754
+               |                     |          
+               |                      --0.78%--0xffff974dfcd0
+               |                                el0t_64_sync
+               |                                el0t_64_sync_handler
+               |                                el0_da
+               |                                do_mem_abort
+               |                                do_translation_fault
+               |                                do_page_fault
+               |                                handle_mm_fault
+               |                                __handle_mm_fault
+               |                                |          
+               |                                 --0.65%--vma_alloc_zeroed_movable_folio
+               |                                           __folio_alloc_noprof
+               |                                           __alloc_pages_noprof
+               |                                           __pi_clear_page
+               |          
+                --3.36%--0xaaaacecf64b8
+                          |          
+                          |--1.55%--0xaaaacecf62a8
+                          |          
+                          |--1.29%--0xaaaacecf62fc
+                          |          
+                           --0.52%--0xffff974ec0d0
+                                     el0t_64_sync
+                                     el0t_64_sync_handler
+                                     el0_da
+                                     do_mem_abort
+                                     do_translation_fault
+                                     do_page_fault
+                                     handle_mm_fault
+
+    10.21%     0.00%  bench    bench                  [.] 0x0000aaaacecf7210
+            |
+            ---0xaaaacecf7210
+               |          
+                --9.69%--0xffff976c7c6c
+                          __kernel_clock_gettime
+
+     7.62%     0.00%  bench     (deleted)             [.] 0x0000ffff974e0bd4
+            |
+            ---0xffff974e0bd4
+               |          
+               |--4.13%--0xffff974de61c
+               |          |          
+               |          |--0.90%--0xffff974dce98
+               |          |          
+               |          |--0.78%--0xffff974dcf08
+               |          |          
+               |           --0.52%--0xffff974dcf78
+               |          
+               |--0.65%--0xffff974ddf98
+               |          
+               |--0.52%--0xffff974ddfe0
+               |          
+                --0.52%--0xffff974ddeec
+
+     6.85%     6.85%  bench    bench                  [.] 0x0000000000006670
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf6670
+
+     6.85%     0.00%  bench    bench                  [.] 0x0000aaaacecf6670
+            |
+            ---0xaaaacecf6670
+
+     5.30%     5.30%  bench    bench                  [.] 0x00000000000065f8
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf65f8
+
+     5.30%     0.00%  bench    bench                  [.] 0x0000aaaacecf65f8
+            |
+            ---0xaaaacecf65f8
+
+     5.04%     5.04%  bench    bench                  [.] 0x00000000000065cc
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf65cc
+
+     5.04%     0.00%  bench    bench                  [.] 0x0000aaaacecf65cc
+            |
+            ---0xaaaacecf65cc
+
+     4.26%     0.00%  bench     (deleted)             [.] 0x0000ffff976a343c
+            |
+            ---0xffff976a343c
+               |          
+               |--2.71%--0xffff974e0754
+               |          |          
+               |          |--0.78%--0xffff974dfcd0
+               |          |          el0t_64_sync
+               |          |          el0t_64_sync_handler
+               |          |          el0_da
+               |          |          do_mem_abort
+               |          |          do_translation_fault
+               |          |          do_page_fault
+               |          |          handle_mm_fault
+               |          |          __handle_mm_fault
+               |          |          |          
+               |          |           --0.65%--vma_alloc_zeroed_movable_folio
+               |          |                     __folio_alloc_noprof
+               |          |                     __alloc_pages_noprof
+               |          |                     __pi_clear_page
+               |          |          
+               |           --0.52%--0xffff974df458
+               |          
+                --0.52%--0xffff974e0700
+
+     4.26%     4.26%  bench    bench                  [.] 0x0000000000002320
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf7240
+               0xaaaacecf2320
+
+     4.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf2320
+            |
+            ---0xaaaacecf2320
+
+     4.13%     4.13%  bench    bench                  [.] 0x0000000000002338
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf7240
+               0xaaaacecf2338
+
+     4.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974de61c
+            |
+            ---0xffff974de61c
+               |          
+               |--0.90%--0xffff974dce98
+               |          
+               |--0.78%--0xffff974dcf08
+               |          
+                --0.52%--0xffff974dcf78
+
+     4.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf2338
+            |
+            ---0xaaaacecf2338
+
+     4.01%     0.00%  bench    bench                  [.] 0x0000aaaacecf7348
+            |
+            ---0xaaaacecf7348
+               |          
+                --2.97%--0xffff974e0bd4
+                          |          
+                           --0.65%--0xffff974ddf98
+
+     3.88%     0.00%  bench    bench                  [.] 0x0000aaaacecf6434
+            |
+            ---0xaaaacecf6434
+               0xffff976a343c
+               |          
+                --2.58%--0xffff974e0754
+                          |          
+                           --0.78%--0xffff974dfcd0
+                                     el0t_64_sync
+                                     el0t_64_sync_handler
+                                     el0_da
+                                     do_mem_abort
+                                     do_translation_fault
+                                     do_page_fault
+                                     handle_mm_fault
+                                     __handle_mm_fault
+                                     |          
+                                      --0.65%--vma_alloc_zeroed_movable_folio
+                                                __folio_alloc_noprof
+                                                __alloc_pages_noprof
+                                                __pi_clear_page
+
+     3.36%     0.00%  bench    bench                  [.] 0x0000aaaacecf64b8
+            |
+            ---0xaaaacecf64b8
+               |          
+               |--1.55%--0xaaaacecf62a8
+               |          
+               |--1.29%--0xaaaacecf62fc
+               |          
+                --0.52%--0xffff974ec0d0
+                          el0t_64_sync
+                          el0t_64_sync_handler
+                          el0_da
+                          do_mem_abort
+                          do_translation_fault
+                          do_page_fault
+                          handle_mm_fault
+
+     3.36%     0.00%  bench    bench                  [.] 0x0000aaaacecf7378
+            |
+            ---0xaaaacecf7378
+               0xffff974e0bd4
+               0xffff974de61c
+               |          
+               |--0.78%--0xffff974dcf08
+               |          
+                --0.65%--0xffff974dce98
+
+     2.97%     2.97%  bench    bench                  [.] 0x0000000000002364
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf7240
+               0xaaaacecf2364
+
+     2.97%     0.00%  bench    bench                  [.] 0x0000aaaacecf2364
+            |
+            ---0xaaaacecf2364
+
+     2.84%     2.84%  bench    bench                  [.] 0x000000000000669c
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf669c
+
+     2.84%     0.00%  bench    bench                  [.] 0x0000aaaacecf669c
+            |
+            ---0xaaaacecf669c
+
+     2.71%     0.00%  bench     (deleted)             [.] 0x0000ffff974e0754
+            |
+            ---0xffff974e0754
+               |          
+               |--0.78%--0xffff974dfcd0
+               |          el0t_64_sync
+               |          el0t_64_sync_handler
+               |          el0_da
+               |          do_mem_abort
+               |          do_translation_fault
+               |          do_page_fault
+               |          handle_mm_fault
+               |          __handle_mm_fault
+               |          |          
+               |           --0.65%--vma_alloc_zeroed_movable_folio
+               |                     __folio_alloc_noprof
+               |                     __alloc_pages_noprof
+               |                     __pi_clear_page
+               |          
+                --0.52%--0xffff974df458
+
+     2.71%     0.00%  bench    bench                  [.] 0x0000aaaacecf141c
+            |
+            ---0xaaaacecf141c
+               |          
+                --0.78%--0xaaaacecf8cc8
+
+     2.58%     2.58%  bench    bench                  [.] 0x00000000000023e0
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf7240
+               0xaaaacecf23e0
+
+     2.58%     0.00%  bench    bench                  [.] 0x0000aaaacecf23e0
+            |
+            ---0xaaaacecf23e0
+
+     2.33%     2.33%  bench    bench                  [.] 0x000000000000240c
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf7240
+               0xaaaacecf240c
+
+     2.33%     0.00%  bench    bench                  [.] 0x0000aaaacecf240c
+            |
+            ---0xaaaacecf240c
+
+     1.68%     0.00%  bench    [kernel.kallsyms]      [k] el0t_64_sync
+            |
+            ---el0t_64_sync
+               el0t_64_sync_handler
+               |          
+                --1.42%--el0_da
+                          do_mem_abort
+                          do_translation_fault
+                          do_page_fault
+                          handle_mm_fault
+                          |          
+                           --1.29%--__handle_mm_fault
+                                     |          
+                                      --0.90%--vma_alloc_zeroed_movable_folio
+                                                __folio_alloc_noprof
+                                                __alloc_pages_noprof
+                                                __pi_clear_page
+
+     1.68%     0.00%  bench    [kernel.kallsyms]      [k] el0t_64_sync_handler
+            |
+            ---el0t_64_sync_handler
+               |          
+                --1.42%--el0_da
+                          do_mem_abort
+                          do_translation_fault
+                          do_page_fault
+                          handle_mm_fault
+                          |          
+                           --1.29%--__handle_mm_fault
+                                     |          
+                                      --0.90%--vma_alloc_zeroed_movable_folio
+                                                __folio_alloc_noprof
+                                                __alloc_pages_noprof
+                                                __pi_clear_page
+
+     1.68%     0.00%  bench    bench                  [.] 0x0000aaaacecf65c8
+            |
+            ---0xaaaacecf65c8
+               |          
+                --1.03%--0xffff974ead6c
+
+     1.55%     1.55%  bench    bench                  [.] 0x00000000000062a8
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf6578
+               0xaaaacecf64b8
+               0xaaaacecf62a8
+
+     1.55%     1.55%  bench     (deleted)             [.] 0x000000000009ad6c
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               |          
+               |--1.03%--0xaaaacecf65c8
+               |          0xffff974ead6c
+               |          
+                --0.52%--0xaaaacecf6640
+                          0xffff974ead6c
+
+     1.55%     1.55%  bench    bench                  [.] 0x00000000000023c8
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf7240
+               0xaaaacecf23c8
+
+     1.55%     0.00%  bench     (deleted)             [.] 0x0000ffff974ead6c
+            |
+            ---0xffff974ead6c
+
+     1.55%     0.00%  bench    bench                  [.] 0x0000aaaacecf23c8
+            |
+            ---0xaaaacecf23c8
+
+     1.55%     0.00%  bench    bench                  [.] 0x0000aaaacecf62a8
+            |
+            ---0xaaaacecf62a8
+
+     1.42%     0.13%  bench    [kernel.kallsyms]      [k] handle_mm_fault
+            |          
+             --1.29%--handle_mm_fault
+                       __handle_mm_fault
+                       |          
+                        --0.90%--vma_alloc_zeroed_movable_folio
+                                  __folio_alloc_noprof
+                                  __alloc_pages_noprof
+                                  __pi_clear_page
+
+     1.42%     0.00%  bench    [kernel.kallsyms]      [k] el0_da
+            |
+            ---el0_da
+               do_mem_abort
+               do_translation_fault
+               do_page_fault
+               handle_mm_fault
+               |          
+                --1.29%--__handle_mm_fault
+                          |          
+                           --0.90%--vma_alloc_zeroed_movable_folio
+                                     __folio_alloc_noprof
+                                     __alloc_pages_noprof
+                                     __pi_clear_page
+
+     1.42%     0.00%  bench    [kernel.kallsyms]      [k] do_mem_abort
+            |
+            ---do_mem_abort
+               do_translation_fault
+               do_page_fault
+               handle_mm_fault
+               |          
+                --1.29%--__handle_mm_fault
+                          |          
+                           --0.90%--vma_alloc_zeroed_movable_folio
+                                     __folio_alloc_noprof
+                                     __alloc_pages_noprof
+                                     __pi_clear_page
+
+     1.42%     0.00%  bench    [kernel.kallsyms]      [k] do_translation_fault
+            |
+            ---do_translation_fault
+               do_page_fault
+               handle_mm_fault
+               |          
+                --1.29%--__handle_mm_fault
+                          |          
+                           --0.90%--vma_alloc_zeroed_movable_folio
+                                     __folio_alloc_noprof
+                                     __alloc_pages_noprof
+                                     __pi_clear_page
+
+     1.42%     0.00%  bench    [kernel.kallsyms]      [k] do_page_fault
+            |
+            ---do_page_fault
+               handle_mm_fault
+               |          
+                --1.29%--__handle_mm_fault
+                          |          
+                           --0.90%--vma_alloc_zeroed_movable_folio
+                                     __folio_alloc_noprof
+                                     __alloc_pages_noprof
+                                     __pi_clear_page
+
+     1.29%     1.29%  bench    bench                  [.] 0x00000000000062fc
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf6578
+               0xaaaacecf64b8
+               0xaaaacecf62fc
+
+     1.29%     0.00%  bench    [kernel.kallsyms]      [k] __handle_mm_fault
+            |
+            ---__handle_mm_fault
+               |          
+                --0.90%--vma_alloc_zeroed_movable_folio
+                          __folio_alloc_noprof
+                          __alloc_pages_noprof
+                          __pi_clear_page
+
+     1.29%     0.00%  bench    bench                  [.] 0x0000aaaacecf62fc
+            |
+            ---0xaaaacecf62fc
+
+     1.03%     1.03%  bench    [kernel.kallsyms]      [k] __pi_clear_page
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               |          
+                --0.90%--0xaaaacecf15a4
+                          0xaaaacecf780c
+                          0xaaaacecf759c
+                          0xaaaacecf6578
+                          |          
+                           --0.65%--0xaaaacecf6434
+                                     0xffff976a343c
+                                     0xffff974e0754
+                                     0xffff974dfcd0
+                                     el0t_64_sync
+                                     el0t_64_sync_handler
+                                     el0_da
+                                     do_mem_abort
+                                     do_translation_fault
+                                     do_page_fault
+                                     handle_mm_fault
+                                     __handle_mm_fault
+                                     vma_alloc_zeroed_movable_folio
+                                     __folio_alloc_noprof
+                                     __alloc_pages_noprof
+                                     __pi_clear_page
+
+     1.03%     1.03%  bench    bench                  [.] 0x0000000000007228
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf7228
+
+     1.03%     0.00%  bench    bench                  [.] 0x0000aaaacecf7228
+            |
+            ---0xaaaacecf7228
+
+     0.90%     0.90%  bench     (deleted)             [.] 0x000000000008ce98
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               |          
+                --0.65%--0xaaaacecf7378
+                          0xffff974e0bd4
+                          0xffff974de61c
+                          0xffff974dce98
+
+     0.90%     0.90%  bench    bench                  [.] 0x0000000000006618
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf6618
+
+     0.90%     0.00%  bench    [kernel.kallsyms]      [k] vma_alloc_zeroed_movable_folio
+            |
+            ---vma_alloc_zeroed_movable_folio
+               __folio_alloc_noprof
+               __alloc_pages_noprof
+               __pi_clear_page
+
+     0.90%     0.00%  bench    [kernel.kallsyms]      [k] __folio_alloc_noprof
+            |
+            ---__folio_alloc_noprof
+               __alloc_pages_noprof
+               __pi_clear_page
+
+     0.90%     0.00%  bench    [kernel.kallsyms]      [k] __alloc_pages_noprof
+            |
+            ---__alloc_pages_noprof
+               __pi_clear_page
+
+     0.90%     0.00%  bench     (deleted)             [.] 0x0000ffff974dce98
+            |
+            ---0xffff974dce98
+
+     0.90%     0.00%  bench    bench                  [.] 0x0000aaaacecf6618
+            |
+            ---0xaaaacecf6618
+
+     0.78%     0.00%  bench     (deleted)             [.] 0x0000ffff974dfcd0
+            |
+            ---0xffff974dfcd0
+               el0t_64_sync
+               el0t_64_sync_handler
+               el0_da
+               do_mem_abort
+               do_translation_fault
+               do_page_fault
+               handle_mm_fault
+               __handle_mm_fault
+               |          
+                --0.65%--vma_alloc_zeroed_movable_folio
+                          __folio_alloc_noprof
+                          __alloc_pages_noprof
+                          __pi_clear_page
+
+     0.78%     0.78%  bench     (deleted)             [.] 0x000000000008cf08
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf7378
+               0xffff974e0bd4
+               0xffff974de61c
+               0xffff974dcf08
+
+     0.78%     0.78%  bench     (deleted)             [.] 0x000000000009ac8c
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf7240
+               |          
+                --0.52%--0xaaaacecf2430
+                          0xffff974eac8c
+
+     0.78%     0.78%  bench    bench                  [.] 0x00000000000065a0
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf65a0
+
+     0.78%     0.78%  bench    bench                  [.] 0x0000000000006600
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf6600
+
+     0.78%     0.78%  bench    bench                  [.] 0x000000000000667c
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf667c
+
+     0.78%     0.78%  bench    bench                  [.] 0x0000000000008cc8
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf141c
+               0xaaaacecf8cc8
+
+     0.78%     0.00%  bench    bench                  [.] 0x0000aaaacecf738c
+            |
+            ---0xaaaacecf738c
+               0xffff974e0bd4
+               0xffff974de61c
+
+     0.78%     0.00%  bench    bench                  [.] 0x0000aaaacecf6640
+            |
+            ---0xaaaacecf6640
+               |          
+                --0.52%--0xffff974ead6c
+
+     0.78%     0.00%  bench    bench                  [.] 0x0000aaaacecf8a10
+            |
+            ---0xaaaacecf8a10
+
+     0.78%     0.00%  bench     (deleted)             [.] 0x0000ffff974dcf08
+            |
+            ---0xffff974dcf08
+
+     0.78%     0.00%  bench     (deleted)             [.] 0x0000ffff974eac8c
+            |
+            ---0xffff974eac8c
+
+     0.78%     0.00%  bench    bench                  [.] 0x0000aaaacecf65a0
+            |
+            ---0xaaaacecf65a0
+
+     0.78%     0.00%  bench    bench                  [.] 0x0000aaaacecf6600
+            |
+            ---0xaaaacecf6600
+
+     0.78%     0.00%  bench    bench                  [.] 0x0000aaaacecf667c
+            |
+            ---0xaaaacecf667c
+
+     0.78%     0.00%  bench    bench                  [.] 0x0000aaaacecf8cc8
+            |
+            ---0xaaaacecf8cc8
+
+     0.65%     0.65%  bench     (deleted)             [.] 0x000000000008df98
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf7348
+               0xffff974e0bd4
+               0xffff974ddf98
+
+     0.65%     0.65%  bench     (deleted)             [.] 0x000000000009a354
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf7244
+               0xffff9769a354
+
+     0.65%     0.65%  bench    bench                  [.] 0x0000000000002400
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf7240
+               0xaaaacecf2400
+
+     0.65%     0.65%  bench    bench                  [.] 0x0000000000006588
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf6588
+
+     0.65%     0.65%  bench    bench                  [.] 0x00000000000065d8
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf65d8
+
+     0.65%     0.00%  bench    bench                  [.] 0x0000aaaacecf7464
+            |
+            ---0xaaaacecf7464
+
+     0.65%     0.00%  bench     (deleted)             [.] 0x0000ffff974ddf98
+            |
+            ---0xffff974ddf98
+
+     0.65%     0.00%  bench     (deleted)             [.] 0x0000ffff9769a354
+            |
+            ---0xffff9769a354
+
+     0.65%     0.00%  bench    bench                  [.] 0x0000aaaacecf2400
+            |
+            ---0xaaaacecf2400
+
+     0.65%     0.00%  bench    bench                  [.] 0x0000aaaacecf6588
+            |
+            ---0xaaaacecf6588
+
+     0.65%     0.00%  bench    bench                  [.] 0x0000aaaacecf65d8
+            |
+            ---0xaaaacecf65d8
+
+     0.52%     0.00%  bench     (deleted)             [.] 0x0000ffff974ec0d0
+            |
+            ---0xffff974ec0d0
+               el0t_64_sync
+               el0t_64_sync_handler
+               el0_da
+               do_mem_abort
+               do_translation_fault
+               do_page_fault
+               handle_mm_fault
+
+     0.52%     0.52%  bench     (deleted)             [.] 0x000000000008f458
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+
+     0.52%     0.52%  bench     (deleted)             [.] 0x0000000000090700
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+
+     0.52%     0.52%  bench     (deleted)             [.] 0x000000000008cf78
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+
+     0.52%     0.52%  bench     (deleted)             [.] 0x000000000008dfe0
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+
+     0.52%     0.52%  bench     (deleted)             [.] 0x000000000008deec
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+
+     0.52%     0.52%  bench     (deleted)             [.] 0x000000000009ad74
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+
+     0.52%     0.52%  bench    bench                  [.] 0x00000000000065ec
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf65ec
+
+     0.52%     0.52%  bench    bench                  [.] 0x0000000000006690
+            |
+            ---0xaaaacecf1670
+               0xffff974774d8
+               0xffff97477400
+               0xaaaacecf15a4
+               0xaaaacecf780c
+               0xaaaacecf759c
+               0xaaaacecf6690
+
+     0.52%     0.00%  bench    bench                  [.] 0x0000aaaacecf2430
+            |
+            ---0xaaaacecf2430
+               0xffff974eac8c
+
+     0.52%     0.00%  bench     (deleted)             [.] 0x0000ffff974dcf78
+            |
+            ---0xffff974dcf78
+
+     0.52%     0.00%  bench     (deleted)             [.] 0x0000ffff974ddeec
+            |
+            ---0xffff974ddeec
+
+     0.52%     0.00%  bench     (deleted)             [.] 0x0000ffff974ddfe0
+            |
+            ---0xffff974ddfe0
+
+     0.52%     0.00%  bench     (deleted)             [.] 0x0000ffff974df458
+            |
+            ---0xffff974df458
+
+     0.52%     0.00%  bench     (deleted)             [.] 0x0000ffff974e0700
+            |
+            ---0xffff974e0700
+
+     0.52%     0.00%  bench     (deleted)             [.] 0x0000ffff974ead74
+            |
+            ---0xffff974ead74
+
+     0.52%     0.00%  bench    bench                  [.] 0x0000aaaacecf65ec
+            |
+            ---0xaaaacecf65ec
+
+     0.52%     0.00%  bench    bench                  [.] 0x0000aaaacecf6690
+            |
+            ---0xaaaacecf6690
+
+     0.39%     0.39%  bench     (deleted)             [.] 0x000000000008cec4
+     0.39%     0.39%  bench     (deleted)             [.] 0x000000000008cf48
+     0.39%     0.39%  bench     (deleted)             [.] 0x000000000008deb0
+     0.39%     0.39%  bench     (deleted)             [.] 0x000000000008df34
+     0.39%     0.39%  bench     (deleted)             [.] 0x00000000000d0e98
+     0.39%     0.39%  bench    bench                  [.] 0x00000000000063b0
+     0.39%     0.39%  bench    bench                  [.] 0x000000000000642c
+     0.39%     0.39%  bench    bench                  [.] 0x0000000000006460
+     0.39%     0.39%  bench     (deleted)             [.] 0x0000000000090b24
+     0.39%     0.39%  bench     (deleted)             [.] 0x0000000000090b4c
+     0.39%     0.39%  bench     (deleted)             [.] 0x0000000000090ba0
+     0.39%     0.39%  bench     (deleted)             [.] 0x00000000000c7c98
+     0.39%     0.39%  bench    bench                  [.] 0x00000000000022a4
+     0.39%     0.39%  bench    bench                  [.] 0x0000000000006580
+     0.39%     0.39%  bench    bench                  [.] 0x0000000000008878
+     0.39%     0.39%  bench    bench                  [.] 0x00000000000075ac
+     0.39%     0.39%  bench    bench                  [.] 0x0000000000008ba4
+     0.39%     0.00%  bench    bench                  [.] 0x0000aaaacecf2614
+     0.39%     0.00%  bench    bench                  [.] 0x0000aaaacecf74d8
+     0.39%     0.00%  bench    bench                  [.] 0x0000aaaacecf8cbc
+     0.39%     0.00%  bench    bench                  [.] 0x0000aaaacecf8cec
+     0.39%     0.00%  bench     (deleted)             [.] 0x0000ffff974dcf84
+     0.39%     0.00%  bench     (deleted)             [.] 0x0000ffff974dcec4
+     0.39%     0.00%  bench     (deleted)             [.] 0x0000ffff974dcf48
+     0.39%     0.00%  bench     (deleted)             [.] 0x0000ffff974ddeb0
+     0.39%     0.00%  bench     (deleted)             [.] 0x0000ffff974ddf34
+     0.39%     0.00%  bench     (deleted)             [.] 0x0000ffff974e0b24
+     0.39%     0.00%  bench     (deleted)             [.] 0x0000ffff974e0b4c
+     0.39%     0.00%  bench     (deleted)             [.] 0x0000ffff974e0ba0
+     0.39%     0.00%  bench     (deleted)             [.] 0x0000ffff976c7c98
+     0.39%     0.00%  bench     (deleted)             [.] 0x0000ffff976d0e98
+     0.39%     0.00%  bench    bench                  [.] 0x0000aaaacecf22a4
+     0.39%     0.00%  bench    bench                  [.] 0x0000aaaacecf63b0
+     0.39%     0.00%  bench    bench                  [.] 0x0000aaaacecf642c
+     0.39%     0.00%  bench    bench                  [.] 0x0000aaaacecf6460
+     0.39%     0.00%  bench    bench                  [.] 0x0000aaaacecf6580
+     0.39%     0.00%  bench    bench                  [.] 0x0000aaaacecf75ac
+     0.39%     0.00%  bench    bench                  [.] 0x0000aaaacecf8878
+     0.39%     0.00%  bench    bench                  [.] 0x0000aaaacecf8ba4
+     0.26%     0.26%  bench    [kernel.kallsyms]      [k] folios_put_refs
+     0.26%     0.00%  bench    [kernel.kallsyms]      [k] el0_svc
+     0.26%     0.00%  bench    [kernel.kallsyms]      [k] do_el0_svc
+     0.26%     0.00%  bench    [kernel.kallsyms]      [k] invoke_syscall.constprop.0
+     0.26%     0.26%  bench     (deleted)             [.] 0x000000000008f95c
+     0.26%     0.26%  bench     (deleted)             [.] 0x000000000008cd8c
+     0.26%     0.26%  bench     (deleted)             [.] 0x000000000008debc
+     0.26%     0.26%  bench     (deleted)             [.] 0x000000000009ad64
+     0.26%     0.26%  bench    bench                  [.] 0x0000000000001214
+     0.26%     0.26%  bench    bench                  [.] 0x00000000000064e0
+     0.26%     0.26%  bench     (deleted)             [.] 0x00000000000b4898
+     0.26%     0.26%  bench    bench                  [.] 0x0000000000002418
+     0.26%     0.26%  bench    bench                  [.] 0x00000000000024cc
+     0.26%     0.26%  bench    bench                  [.] 0x0000000000006420
+     0.26%     0.26%  bench    bench                  [.] 0x0000000000006554
+     0.26%     0.26%  bench    bench                  [.] 0x0000000000006684
+     0.26%     0.26%  bench    bench                  [.] 0x0000000000008844
+     0.26%     0.26%  bench    bench                  [.] 0x0000000000001224
+     0.26%     0.26%  bench    bench                  [.] 0x0000000000006664
+     0.26%     0.26%  bench    bench                  [.] 0x0000000000007224
+     0.26%     0.26%  bench    bench                  [.] 0x0000000000007240
+     0.26%     0.00%  bench    [kernel.kallsyms]      [k] folio_add_lru_vma
+     0.26%     0.00%  bench    [kernel.kallsyms]      [k] folio_add_lru
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf2490
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf8b9c
+     0.26%     0.00%  bench     (deleted)             [.] 0x0000ffff974dcf44
+     0.26%     0.00%  bench    [kernel.kallsyms]      [k] folio_batch_move_lru
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf24f0
+     0.26%     0.00%  bench     (deleted)             [.] 0x0000ffff974dcd8c
+     0.26%     0.00%  bench     (deleted)             [.] 0x0000ffff974ddebc
+     0.26%     0.00%  bench     (deleted)             [.] 0x0000ffff974df95c
+     0.26%     0.00%  bench     (deleted)             [.] 0x0000ffff974ead64
+     0.26%     0.00%  bench     (deleted)             [.] 0x0000ffff97504898
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf1214
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf1224
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf2418
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf24cc
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf6420
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf64e0
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf6554
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf6664
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf6684
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf7224
+     0.26%     0.00%  bench    bench                  [.] 0x0000aaaacecf8844
+     0.13%     0.13%  bench    [kernel.kallsyms]      [k] mas_prev_setup.constprop.0
+     0.13%     0.13%  bench    [kernel.kallsyms]      [k] __mod_memcg_lruvec_state
+     0.13%     0.13%  bench    [kernel.kallsyms]      [k] net_rx_action
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] __arm64_sys_exit_group
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974dfce8
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] do_group_exit
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008c740
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008efc8
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008f0e4
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008f3fc
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008f41c
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008f4a0
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008f4d0
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008f500
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974dec4c
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] do_exit
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf8d14
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008cd60
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008cd6c
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008cdd0
+     0.13%     0.13%  bench     (deleted)             [.] 0x00000000000905a8
+     0.13%     0.13%  bench     (deleted)             [.] 0x00000000000905d8
+     0.13%     0.13%  bench     (deleted)             [.] 0x00000000000905ec
+     0.13%     0.13%  bench     (deleted)             [.] 0x00000000000905f8
+     0.13%     0.13%  bench     (deleted)             [.] 0x00000000000905fc
+     0.13%     0.13%  bench     (deleted)             [.] 0x00000000000906f8
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000009075c
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974ddd68
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] el0t_64_irq
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] mmput
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008cea8
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008ceb4
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008ced0
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008cf28
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008df10
+     0.13%     0.13%  bench     (deleted)             [.] 0x0000000000090738
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff97531b8c
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] __mmput
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] el0t_64_irq_handler
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008de8c
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008deac
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008dec4
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008df04
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008dfb4
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000009ad60
+     0.13%     0.13%  bench    bench                  [.] 0x00000000000011b4
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000006384
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000006394
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000006400
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000006470
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000006474
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000006488
+     0.13%     0.13%  bench    bench                  [.] 0x00000000000064a4
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] __el0_irq_handler_common
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] exit_mmap
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000008e008
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000009ac34
+     0.13%     0.13%  bench     (deleted)             [.] 0x000000000009d524
+     0.13%     0.13%  bench    bench                  [.] 0x00000000000022d0
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000002458
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000002548
+     0.13%     0.13%  bench    bench                  [.] 0x00000000000025bc
+     0.13%     0.13%  bench    bench                  [.] 0x00000000000065e0
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000006694
+     0.13%     0.13%  bench    bench                  [.] 0x00000000000087e4
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000008838
+     0.13%     0.13%  bench    ld-linux-aarch64.so.1  [.] 0x0000000000012010
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] el0_interrupt
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] unmap_vmas
+     0.13%     0.00%  bench    ld-linux-aarch64.so.1  [.] 0x0000ffff979d4c4c
+     0.13%     0.13%  bench    bench                  [.] 0x00000000000011c4
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000007200
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000007258
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000007348
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000007584
+     0.13%     0.13%  bench    bench                  [.] 0x00000000000089a8
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] irq_exit_rcu
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] unmap_single_vma.isra.0
+     0.13%     0.00%  bench    ld-linux-aarch64.so.1  [.] 0x0000ffff979d5cb8
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000008c14
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000008c7c
+     0.13%     0.13%  bench    bench                  [.] 0x0000000000008cbc
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] do_softirq_own_stack
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] unmap_page_range
+     0.13%     0.00%  bench    ld-linux-aarch64.so.1  [.] 0x0000ffff979d4310
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] call_on_irq_stack
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] folio_remove_rmap_ptes
+     0.13%     0.00%  bench    ld-linux-aarch64.so.1  [.] 0x0000ffff979d7df4
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] ____do_softirq
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] __arm64_sys_brk
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] __lruvec_stat_mod_folio
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf25ec
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf7550
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf8bd0
+     0.13%     0.00%  bench    ld-linux-aarch64.so.1  [.] 0x0000ffff979cbf34
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] __do_softirq
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] __mod_lruvec_state
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] do_huge_pmd_anonymous_page
+     0.13%     0.00%  bench    [kernel.kallsyms]      [k] mas_prev
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf8928
+     0.13%     0.00%  bench    ld-linux-aarch64.so.1  [.] 0x0000ffff979c72ec
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974dc740
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974dcd60
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974dcd6c
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974dcdd0
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974dcea8
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974dceb4
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974dced0
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974dcf28
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974dde8c
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974ddeac
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974ddec4
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974ddf04
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974ddf10
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974ddfb4
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974de008
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974defc8
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974df0e4
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974df3fc
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974df41c
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974df4a0
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974df4d0
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974df500
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974e05a8
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974e05d8
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974e05ec
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974e05f8
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974e05fc
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974e06f8
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974e0738
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974e075c
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974eac34
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff974ead60
+     0.13%     0.00%  bench     (deleted)             [.] 0x0000ffff9769d524
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf11b4
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf11c4
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf22d0
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf2458
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf2548
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf25bc
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf6384
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf6394
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf6400
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf6470
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf6474
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf6488
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf64a4
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf65e0
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf6694
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf7200
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf7258
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf7584
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf87e4
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf8838
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf89a8
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf8c14
+     0.13%     0.00%  bench    bench                  [.] 0x0000aaaacecf8c7c
+     0.13%     0.00%  bench    ld-linux-aarch64.so.1  [.] 0x0000ffff979cf010
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

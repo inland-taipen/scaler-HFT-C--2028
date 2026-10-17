@@ -1,0 +1,3 @@
+verify A vs B: PASS
+verify A vs C: PASS
+verify B vs C: PASS

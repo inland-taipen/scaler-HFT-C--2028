@@ -1,0 +1,4 @@
+build/
+*.data
+decision_tests/tick_test
+decision_tests/workload_test

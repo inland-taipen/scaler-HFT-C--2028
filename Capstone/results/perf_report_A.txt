@@ -1,0 +1,1874 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 892  of event 'cpu-clock:pppH'
+# Event count (approx.): 223000000
+#
+# Children      Self  Command  Shared Object        Symbol                                                 
+# ........  ........  .......  ...................  .......................................................
+#
+    99.78%     0.00%  bench    bench                [.] 0x0000aaaab6c01670
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               |          
+               |--96.41%--0xaaaab6c01444
+               |          0xaaaab6c0514c
+               |          |          
+               |          |--22.42%--0xaaaab6c049f4
+               |          |          |          
+               |          |          |--3.48%--0xaaaab6c04604
+               |          |          |          
+               |          |          |--2.91%--0xaaaab6c04454
+               |          |          |          
+               |          |          |--2.58%--0xaaaab6c04610
+               |          |          |          
+               |          |          |--2.13%--0xaaaab6c04480
+               |          |          |          
+               |          |          |--2.13%--0xaaaab6c04358
+               |          |          |          
+               |          |          |--1.68%--0xaaaab6c04330
+               |          |          |          
+               |          |          |--1.23%--0xaaaab6c043c0
+               |          |          |          
+               |          |          |--1.12%--0xaaaab6c045ec
+               |          |          |          
+               |          |          |--0.90%--0xaaaab6c045a4
+               |          |          |          |          
+               |          |          |           --0.78%--cfree
+               |          |          |          
+               |          |          |--0.90%--0xaaaab6c044e8
+               |          |          |          
+               |          |           --0.56%--0xaaaab6c045f8
+               |          |          
+               |          |--12.67%--0xaaaab6c04de0
+               |          |          |          
+               |          |          |--6.95%--0xaaaab6c03de4
+               |          |          |          |          
+               |          |          |          |--6.39%--operator new
+               |          |          |          |          malloc
+               |          |          |          |          |          
+               |          |          |          |           --3.14%--0xffff9badfcd0
+               |          |          |          |                     el0t_64_sync
+               |          |          |          |                     el0t_64_sync_handler
+               |          |          |          |                     el0_da
+               |          |          |          |                     |          
+               |          |          |          |                      --3.03%--do_mem_abort
+               |          |          |          |                                do_translation_fault
+               |          |          |          |                                do_page_fault
+               |          |          |          |                                handle_mm_fault
+               |          |          |          |                                __handle_mm_fault
+               |          |          |          |                                |          
+               |          |          |          |                                 --2.80%--vma_alloc_zeroed_movable_folio
+               |          |          |          |                                           __folio_alloc_noprof
+               |          |          |          |                                           __alloc_pages_noprof
+               |          |          |          |                                           |          
+               |          |          |          |                                            --2.69%--__pi_clear_page
+               |          |          |          |          
+               |          |          |           --0.56%--malloc@plt
+               |          |          |          
+               |          |           --3.81%--0xaaaab6c03e68
+               |          |                     |          
+               |          |                     |--1.46%--0xaaaab6c03c58
+               |          |                     |          
+               |          |                     |--0.90%--0xaaaab6c03cac
+               |          |                     |          
+               |          |                     |--0.78%--0xaaaab6c03c1c
+               |          |                     |          operator new
+               |          |                     |          malloc
+               |          |                     |          0xffff9badf1a4
+               |          |                     |          
+               |          |                      --0.56%--0xffff9baec0d0
+               |          |                                el0t_64_sync
+               |          |                                el0t_64_sync_handler
+               |          |                                el0_da
+               |          |                                do_mem_abort
+               |          |                                do_translation_fault
+               |          |                                do_page_fault
+               |          |                                handle_mm_fault
+               |          |                                __handle_mm_fault
+               |          |          
+               |          |--12.44%--0xaaaab6c04a04
+               |          |          |          
+               |          |           --12.11%--std::chrono::_V2::steady_clock::now
+               |          |                     |          
+               |          |                      --11.66%--__kernel_clock_gettime
+               |          |          
+               |          |--12.00%--0xaaaab6c049cc
+               |          |          |          
+               |          |           --11.43%--std::chrono::_V2::steady_clock::now
+               |          |                     __kernel_clock_gettime
+               |          |          
+               |          |--5.72%--0xaaaab6c04e64
+               |          |          
+               |          |--4.37%--0xaaaab6c04e10
+               |          |          
+               |          |--4.26%--0xaaaab6c04f74
+               |          |          
+               |          |--4.15%--0xaaaab6c04f38
+               |          |          
+               |          |--2.91%--0xaaaab6c04b58
+               |          |          cfree
+               |          |          0xffff9bade61c
+               |          |          |          
+               |          |          |--0.90%--0xffff9badcf78
+               |          |          |          
+               |          |           --0.56%--0xffff9badcf44
+               |          |          
+               |          |--2.58%--0xaaaab6c04b28
+               |          |          |          
+               |          |           --2.24%--cfree
+               |          |          
+               |          |--1.79%--0xaaaab6c04f40
+               |          |          
+               |          |--1.46%--0xaaaab6c04e18
+               |          |          
+               |          |--1.01%--0xaaaab6c04f2c
+               |          |          
+               |          |--0.90%--0xaaaab6c04e70
+               |          |          
+               |          |--0.78%--0xaaaab6c04c74
+               |          |          
+               |          |--0.67%--0xaaaab6c04e04
+               |          |          
+               |          |--0.67%--0xaaaab6c04e00
+               |          |          
+               |          |--0.67%--0xaaaab6c01224
+               |          |          
+               |          |--0.56%--0xaaaab6c04df4
+               |          |          
+               |          |--0.56%--0xaaaab6c04d0c
+               |          |          
+               |           --0.56%--0xaaaab6c049e4
+               |          
+                --3.25%--0xaaaab6c0141c
+
+    99.78%     0.00%  bench    libc.so.6            [.] __libc_start_main
+            |
+            ---__libc_start_main
+               0xffff9ba77400
+               |          
+               |--96.41%--0xaaaab6c01444
+               |          0xaaaab6c0514c
+               |          |          
+               |          |--22.42%--0xaaaab6c049f4
+               |          |          |          
+               |          |          |--3.48%--0xaaaab6c04604
+               |          |          |          
+               |          |          |--2.91%--0xaaaab6c04454
+               |          |          |          
+               |          |          |--2.58%--0xaaaab6c04610
+               |          |          |          
+               |          |          |--2.13%--0xaaaab6c04480
+               |          |          |          
+               |          |          |--2.13%--0xaaaab6c04358
+               |          |          |          
+               |          |          |--1.68%--0xaaaab6c04330
+               |          |          |          
+               |          |          |--1.23%--0xaaaab6c043c0
+               |          |          |          
+               |          |          |--1.12%--0xaaaab6c045ec
+               |          |          |          
+               |          |          |--0.90%--0xaaaab6c045a4
+               |          |          |          |          
+               |          |          |           --0.78%--cfree
+               |          |          |          
+               |          |          |--0.90%--0xaaaab6c044e8
+               |          |          |          
+               |          |           --0.56%--0xaaaab6c045f8
+               |          |          
+               |          |--12.67%--0xaaaab6c04de0
+               |          |          |          
+               |          |          |--6.95%--0xaaaab6c03de4
+               |          |          |          |          
+               |          |          |          |--6.39%--operator new
+               |          |          |          |          malloc
+               |          |          |          |          |          
+               |          |          |          |           --3.14%--0xffff9badfcd0
+               |          |          |          |                     el0t_64_sync
+               |          |          |          |                     el0t_64_sync_handler
+               |          |          |          |                     el0_da
+               |          |          |          |                     |          
+               |          |          |          |                      --3.03%--do_mem_abort
+               |          |          |          |                                do_translation_fault
+               |          |          |          |                                do_page_fault
+               |          |          |          |                                handle_mm_fault
+               |          |          |          |                                __handle_mm_fault
+               |          |          |          |                                |          
+               |          |          |          |                                 --2.80%--vma_alloc_zeroed_movable_folio
+               |          |          |          |                                           __folio_alloc_noprof
+               |          |          |          |                                           __alloc_pages_noprof
+               |          |          |          |                                           |          
+               |          |          |          |                                            --2.69%--__pi_clear_page
+               |          |          |          |          
+               |          |          |           --0.56%--malloc@plt
+               |          |          |          
+               |          |           --3.81%--0xaaaab6c03e68
+               |          |                     |          
+               |          |                     |--1.46%--0xaaaab6c03c58
+               |          |                     |          
+               |          |                     |--0.90%--0xaaaab6c03cac
+               |          |                     |          
+               |          |                     |--0.78%--0xaaaab6c03c1c
+               |          |                     |          operator new
+               |          |                     |          malloc
+               |          |                     |          0xffff9badf1a4
+               |          |                     |          
+               |          |                      --0.56%--0xffff9baec0d0
+               |          |                                el0t_64_sync
+               |          |                                el0t_64_sync_handler
+               |          |                                el0_da
+               |          |                                do_mem_abort
+               |          |                                do_translation_fault
+               |          |                                do_page_fault
+               |          |                                handle_mm_fault
+               |          |                                __handle_mm_fault
+               |          |          
+               |          |--12.44%--0xaaaab6c04a04
+               |          |          |          
+               |          |           --12.11%--std::chrono::_V2::steady_clock::now
+               |          |                     |          
+               |          |                      --11.66%--__kernel_clock_gettime
+               |          |          
+               |          |--12.00%--0xaaaab6c049cc
+               |          |          |          
+               |          |           --11.43%--std::chrono::_V2::steady_clock::now
+               |          |                     __kernel_clock_gettime
+               |          |          
+               |          |--5.72%--0xaaaab6c04e64
+               |          |          
+               |          |--4.37%--0xaaaab6c04e10
+               |          |          
+               |          |--4.26%--0xaaaab6c04f74
+               |          |          
+               |          |--4.15%--0xaaaab6c04f38
+               |          |          
+               |          |--2.91%--0xaaaab6c04b58
+               |          |          cfree
+               |          |          0xffff9bade61c
+               |          |          |          
+               |          |          |--0.90%--0xffff9badcf78
+               |          |          |          
+               |          |           --0.56%--0xffff9badcf44
+               |          |          
+               |          |--2.58%--0xaaaab6c04b28
+               |          |          |          
+               |          |           --2.24%--cfree
+               |          |          
+               |          |--1.79%--0xaaaab6c04f40
+               |          |          
+               |          |--1.46%--0xaaaab6c04e18
+               |          |          
+               |          |--1.01%--0xaaaab6c04f2c
+               |          |          
+               |          |--0.90%--0xaaaab6c04e70
+               |          |          
+               |          |--0.78%--0xaaaab6c04c74
+               |          |          
+               |          |--0.67%--0xaaaab6c04e04
+               |          |          
+               |          |--0.67%--0xaaaab6c04e00
+               |          |          
+               |          |--0.67%--0xaaaab6c01224
+               |          |          
+               |          |--0.56%--0xaaaab6c04df4
+               |          |          
+               |          |--0.56%--0xaaaab6c04d0c
+               |          |          
+               |           --0.56%--0xaaaab6c049e4
+               |          
+                --3.25%--0xaaaab6c0141c
+
+    99.78%     0.00%  bench    libc.so.6            [.] 0x0000ffff9ba77400
+            |
+            ---0xffff9ba77400
+               |          
+               |--96.41%--0xaaaab6c01444
+               |          0xaaaab6c0514c
+               |          |          
+               |          |--22.42%--0xaaaab6c049f4
+               |          |          |          
+               |          |          |--3.48%--0xaaaab6c04604
+               |          |          |          
+               |          |          |--2.91%--0xaaaab6c04454
+               |          |          |          
+               |          |          |--2.58%--0xaaaab6c04610
+               |          |          |          
+               |          |          |--2.13%--0xaaaab6c04480
+               |          |          |          
+               |          |          |--2.13%--0xaaaab6c04358
+               |          |          |          
+               |          |          |--1.68%--0xaaaab6c04330
+               |          |          |          
+               |          |          |--1.23%--0xaaaab6c043c0
+               |          |          |          
+               |          |          |--1.12%--0xaaaab6c045ec
+               |          |          |          
+               |          |          |--0.90%--0xaaaab6c045a4
+               |          |          |          |          
+               |          |          |           --0.78%--cfree
+               |          |          |          
+               |          |          |--0.90%--0xaaaab6c044e8
+               |          |          |          
+               |          |           --0.56%--0xaaaab6c045f8
+               |          |          
+               |          |--12.67%--0xaaaab6c04de0
+               |          |          |          
+               |          |          |--6.95%--0xaaaab6c03de4
+               |          |          |          |          
+               |          |          |          |--6.39%--operator new
+               |          |          |          |          malloc
+               |          |          |          |          |          
+               |          |          |          |           --3.14%--0xffff9badfcd0
+               |          |          |          |                     el0t_64_sync
+               |          |          |          |                     el0t_64_sync_handler
+               |          |          |          |                     el0_da
+               |          |          |          |                     |          
+               |          |          |          |                      --3.03%--do_mem_abort
+               |          |          |          |                                do_translation_fault
+               |          |          |          |                                do_page_fault
+               |          |          |          |                                handle_mm_fault
+               |          |          |          |                                __handle_mm_fault
+               |          |          |          |                                |          
+               |          |          |          |                                 --2.80%--vma_alloc_zeroed_movable_folio
+               |          |          |          |                                           __folio_alloc_noprof
+               |          |          |          |                                           __alloc_pages_noprof
+               |          |          |          |                                           |          
+               |          |          |          |                                            --2.69%--__pi_clear_page
+               |          |          |          |          
+               |          |          |           --0.56%--malloc@plt
+               |          |          |          
+               |          |           --3.81%--0xaaaab6c03e68
+               |          |                     |          
+               |          |                     |--1.46%--0xaaaab6c03c58
+               |          |                     |          
+               |          |                     |--0.90%--0xaaaab6c03cac
+               |          |                     |          
+               |          |                     |--0.78%--0xaaaab6c03c1c
+               |          |                     |          operator new
+               |          |                     |          malloc
+               |          |                     |          0xffff9badf1a4
+               |          |                     |          
+               |          |                      --0.56%--0xffff9baec0d0
+               |          |                                el0t_64_sync
+               |          |                                el0t_64_sync_handler
+               |          |                                el0_da
+               |          |                                do_mem_abort
+               |          |                                do_translation_fault
+               |          |                                do_page_fault
+               |          |                                handle_mm_fault
+               |          |                                __handle_mm_fault
+               |          |          
+               |          |--12.44%--0xaaaab6c04a04
+               |          |          |          
+               |          |           --12.11%--std::chrono::_V2::steady_clock::now
+               |          |                     |          
+               |          |                      --11.66%--__kernel_clock_gettime
+               |          |          
+               |          |--12.00%--0xaaaab6c049cc
+               |          |          |          
+               |          |           --11.43%--std::chrono::_V2::steady_clock::now
+               |          |                     __kernel_clock_gettime
+               |          |          
+               |          |--5.72%--0xaaaab6c04e64
+               |          |          
+               |          |--4.37%--0xaaaab6c04e10
+               |          |          
+               |          |--4.26%--0xaaaab6c04f74
+               |          |          
+               |          |--4.15%--0xaaaab6c04f38
+               |          |          
+               |          |--2.91%--0xaaaab6c04b58
+               |          |          cfree
+               |          |          0xffff9bade61c
+               |          |          |          
+               |          |          |--0.90%--0xffff9badcf78
+               |          |          |          
+               |          |           --0.56%--0xffff9badcf44
+               |          |          
+               |          |--2.58%--0xaaaab6c04b28
+               |          |          |          
+               |          |           --2.24%--cfree
+               |          |          
+               |          |--1.79%--0xaaaab6c04f40
+               |          |          
+               |          |--1.46%--0xaaaab6c04e18
+               |          |          
+               |          |--1.01%--0xaaaab6c04f2c
+               |          |          
+               |          |--0.90%--0xaaaab6c04e70
+               |          |          
+               |          |--0.78%--0xaaaab6c04c74
+               |          |          
+               |          |--0.67%--0xaaaab6c04e04
+               |          |          
+               |          |--0.67%--0xaaaab6c04e00
+               |          |          
+               |          |--0.67%--0xaaaab6c01224
+               |          |          
+               |          |--0.56%--0xaaaab6c04df4
+               |          |          
+               |          |--0.56%--0xaaaab6c04d0c
+               |          |          
+               |           --0.56%--0xaaaab6c049e4
+               |          
+                --3.25%--0xaaaab6c0141c
+
+    96.41%     0.00%  bench    bench                [.] 0x0000aaaab6c01444
+            |
+            ---0xaaaab6c01444
+               0xaaaab6c0514c
+               |          
+               |--22.42%--0xaaaab6c049f4
+               |          |          
+               |          |--3.48%--0xaaaab6c04604
+               |          |          
+               |          |--2.91%--0xaaaab6c04454
+               |          |          
+               |          |--2.58%--0xaaaab6c04610
+               |          |          
+               |          |--2.13%--0xaaaab6c04480
+               |          |          
+               |          |--2.13%--0xaaaab6c04358
+               |          |          
+               |          |--1.68%--0xaaaab6c04330
+               |          |          
+               |          |--1.23%--0xaaaab6c043c0
+               |          |          
+               |          |--1.12%--0xaaaab6c045ec
+               |          |          
+               |          |--0.90%--0xaaaab6c045a4
+               |          |          |          
+               |          |           --0.78%--cfree
+               |          |          
+               |          |--0.90%--0xaaaab6c044e8
+               |          |          
+               |           --0.56%--0xaaaab6c045f8
+               |          
+               |--12.67%--0xaaaab6c04de0
+               |          |          
+               |          |--6.95%--0xaaaab6c03de4
+               |          |          |          
+               |          |          |--6.39%--operator new
+               |          |          |          malloc
+               |          |          |          |          
+               |          |          |           --3.14%--0xffff9badfcd0
+               |          |          |                     el0t_64_sync
+               |          |          |                     el0t_64_sync_handler
+               |          |          |                     el0_da
+               |          |          |                     |          
+               |          |          |                      --3.03%--do_mem_abort
+               |          |          |                                do_translation_fault
+               |          |          |                                do_page_fault
+               |          |          |                                handle_mm_fault
+               |          |          |                                __handle_mm_fault
+               |          |          |                                |          
+               |          |          |                                 --2.80%--vma_alloc_zeroed_movable_folio
+               |          |          |                                           __folio_alloc_noprof
+               |          |          |                                           __alloc_pages_noprof
+               |          |          |                                           |          
+               |          |          |                                            --2.69%--__pi_clear_page
+               |          |          |          
+               |          |           --0.56%--malloc@plt
+               |          |          
+               |           --3.81%--0xaaaab6c03e68
+               |                     |          
+               |                     |--1.46%--0xaaaab6c03c58
+               |                     |          
+               |                     |--0.90%--0xaaaab6c03cac
+               |                     |          
+               |                     |--0.78%--0xaaaab6c03c1c
+               |                     |          operator new
+               |                     |          malloc
+               |                     |          0xffff9badf1a4
+               |                     |          
+               |                      --0.56%--0xffff9baec0d0
+               |                                el0t_64_sync
+               |                                el0t_64_sync_handler
+               |                                el0_da
+               |                                do_mem_abort
+               |                                do_translation_fault
+               |                                do_page_fault
+               |                                handle_mm_fault
+               |                                __handle_mm_fault
+               |          
+               |--12.44%--0xaaaab6c04a04
+               |          |          
+               |           --12.11%--std::chrono::_V2::steady_clock::now
+               |                     |          
+               |                      --11.66%--__kernel_clock_gettime
+               |          
+               |--12.00%--0xaaaab6c049cc
+               |          |          
+               |           --11.43%--std::chrono::_V2::steady_clock::now
+               |                     __kernel_clock_gettime
+               |          
+               |--5.72%--0xaaaab6c04e64
+               |          
+               |--4.37%--0xaaaab6c04e10
+               |          
+               |--4.26%--0xaaaab6c04f74
+               |          
+               |--4.15%--0xaaaab6c04f38
+               |          
+               |--2.91%--0xaaaab6c04b58
+               |          cfree
+               |          0xffff9bade61c
+               |          |          
+               |          |--0.90%--0xffff9badcf78
+               |          |          
+               |           --0.56%--0xffff9badcf44
+               |          
+               |--2.58%--0xaaaab6c04b28
+               |          |          
+               |           --2.24%--cfree
+               |          
+               |--1.79%--0xaaaab6c04f40
+               |          
+               |--1.46%--0xaaaab6c04e18
+               |          
+               |--1.01%--0xaaaab6c04f2c
+               |          
+               |--0.90%--0xaaaab6c04e70
+               |          
+               |--0.78%--0xaaaab6c04c74
+               |          
+               |--0.67%--0xaaaab6c04e04
+               |          
+               |--0.67%--0xaaaab6c04e00
+               |          
+               |--0.67%--0xaaaab6c01224
+               |          
+               |--0.56%--0xaaaab6c04df4
+               |          
+               |--0.56%--0xaaaab6c04d0c
+               |          
+                --0.56%--0xaaaab6c049e4
+
+    96.41%     0.00%  bench    bench                [.] 0x0000aaaab6c0514c
+            |
+            ---0xaaaab6c0514c
+               |          
+               |--22.42%--0xaaaab6c049f4
+               |          |          
+               |          |--3.48%--0xaaaab6c04604
+               |          |          
+               |          |--2.91%--0xaaaab6c04454
+               |          |          
+               |          |--2.58%--0xaaaab6c04610
+               |          |          
+               |          |--2.13%--0xaaaab6c04480
+               |          |          
+               |          |--2.13%--0xaaaab6c04358
+               |          |          
+               |          |--1.68%--0xaaaab6c04330
+               |          |          
+               |          |--1.23%--0xaaaab6c043c0
+               |          |          
+               |          |--1.12%--0xaaaab6c045ec
+               |          |          
+               |          |--0.90%--0xaaaab6c045a4
+               |          |          |          
+               |          |           --0.78%--cfree
+               |          |          
+               |          |--0.90%--0xaaaab6c044e8
+               |          |          
+               |           --0.56%--0xaaaab6c045f8
+               |          
+               |--12.67%--0xaaaab6c04de0
+               |          |          
+               |          |--6.95%--0xaaaab6c03de4
+               |          |          |          
+               |          |          |--6.39%--operator new
+               |          |          |          malloc
+               |          |          |          |          
+               |          |          |           --3.14%--0xffff9badfcd0
+               |          |          |                     el0t_64_sync
+               |          |          |                     el0t_64_sync_handler
+               |          |          |                     el0_da
+               |          |          |                     |          
+               |          |          |                      --3.03%--do_mem_abort
+               |          |          |                                do_translation_fault
+               |          |          |                                do_page_fault
+               |          |          |                                handle_mm_fault
+               |          |          |                                __handle_mm_fault
+               |          |          |                                |          
+               |          |          |                                 --2.80%--vma_alloc_zeroed_movable_folio
+               |          |          |                                           __folio_alloc_noprof
+               |          |          |                                           __alloc_pages_noprof
+               |          |          |                                           |          
+               |          |          |                                            --2.69%--__pi_clear_page
+               |          |          |          
+               |          |           --0.56%--malloc@plt
+               |          |          
+               |           --3.81%--0xaaaab6c03e68
+               |                     |          
+               |                     |--1.46%--0xaaaab6c03c58
+               |                     |          
+               |                     |--0.90%--0xaaaab6c03cac
+               |                     |          
+               |                     |--0.78%--0xaaaab6c03c1c
+               |                     |          operator new
+               |                     |          malloc
+               |                     |          0xffff9badf1a4
+               |                     |          
+               |                      --0.56%--0xffff9baec0d0
+               |                                el0t_64_sync
+               |                                el0t_64_sync_handler
+               |                                el0_da
+               |                                do_mem_abort
+               |                                do_translation_fault
+               |                                do_page_fault
+               |                                handle_mm_fault
+               |                                __handle_mm_fault
+               |          
+               |--12.44%--0xaaaab6c04a04
+               |          |          
+               |           --12.11%--std::chrono::_V2::steady_clock::now
+               |                     |          
+               |                      --11.66%--__kernel_clock_gettime
+               |          
+               |--12.00%--0xaaaab6c049cc
+               |          |          
+               |           --11.43%--std::chrono::_V2::steady_clock::now
+               |                     __kernel_clock_gettime
+               |          
+               |--5.72%--0xaaaab6c04e64
+               |          
+               |--4.37%--0xaaaab6c04e10
+               |          
+               |--4.26%--0xaaaab6c04f74
+               |          
+               |--4.15%--0xaaaab6c04f38
+               |          
+               |--2.91%--0xaaaab6c04b58
+               |          cfree
+               |          0xffff9bade61c
+               |          |          
+               |          |--0.90%--0xffff9badcf78
+               |          |          
+               |           --0.56%--0xffff9badcf44
+               |          
+               |--2.58%--0xaaaab6c04b28
+               |          |          
+               |           --2.24%--cfree
+               |          
+               |--1.79%--0xaaaab6c04f40
+               |          
+               |--1.46%--0xaaaab6c04e18
+               |          
+               |--1.01%--0xaaaab6c04f2c
+               |          
+               |--0.90%--0xaaaab6c04e70
+               |          
+               |--0.78%--0xaaaab6c04c74
+               |          
+               |--0.67%--0xaaaab6c04e04
+               |          
+               |--0.67%--0xaaaab6c04e00
+               |          
+               |--0.67%--0xaaaab6c01224
+               |          
+               |--0.56%--0xaaaab6c04df4
+               |          
+               |--0.56%--0xaaaab6c04d0c
+               |          
+                --0.56%--0xaaaab6c049e4
+
+    23.54%     0.45%  bench    libstdc++.so.6.0.30  [.] std::chrono::_V2::steady_clock::now
+            |          
+             --23.09%--std::chrono::_V2::steady_clock::now
+                       __kernel_clock_gettime
+
+    23.09%    23.09%  bench    [vdso]               [.] __kernel_clock_gettime
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               |          
+               |--11.66%--0xaaaab6c04a04
+               |          std::chrono::_V2::steady_clock::now
+               |          __kernel_clock_gettime
+               |          
+                --11.43%--0xaaaab6c049cc
+                          std::chrono::_V2::steady_clock::now
+                          __kernel_clock_gettime
+
+    22.42%     0.00%  bench    bench                [.] 0x0000aaaab6c049f4
+            |
+            ---0xaaaab6c049f4
+               |          
+               |--3.48%--0xaaaab6c04604
+               |          
+               |--2.91%--0xaaaab6c04454
+               |          
+               |--2.58%--0xaaaab6c04610
+               |          
+               |--2.13%--0xaaaab6c04480
+               |          
+               |--2.13%--0xaaaab6c04358
+               |          
+               |--1.68%--0xaaaab6c04330
+               |          
+               |--1.23%--0xaaaab6c043c0
+               |          
+               |--1.12%--0xaaaab6c045ec
+               |          
+               |--0.90%--0xaaaab6c045a4
+               |          |          
+               |           --0.78%--cfree
+               |          
+               |--0.90%--0xaaaab6c044e8
+               |          
+                --0.56%--0xaaaab6c045f8
+
+    12.67%     0.00%  bench    bench                [.] 0x0000aaaab6c04de0
+            |
+            ---0xaaaab6c04de0
+               |          
+               |--6.95%--0xaaaab6c03de4
+               |          |          
+               |          |--6.39%--operator new
+               |          |          malloc
+               |          |          |          
+               |          |           --3.14%--0xffff9badfcd0
+               |          |                     el0t_64_sync
+               |          |                     el0t_64_sync_handler
+               |          |                     el0_da
+               |          |                     |          
+               |          |                      --3.03%--do_mem_abort
+               |          |                                do_translation_fault
+               |          |                                do_page_fault
+               |          |                                handle_mm_fault
+               |          |                                __handle_mm_fault
+               |          |                                |          
+               |          |                                 --2.80%--vma_alloc_zeroed_movable_folio
+               |          |                                           __folio_alloc_noprof
+               |          |                                           __alloc_pages_noprof
+               |          |                                           |          
+               |          |                                            --2.69%--__pi_clear_page
+               |          |          
+               |           --0.56%--malloc@plt
+               |          
+                --3.81%--0xaaaab6c03e68
+                          |          
+                          |--1.46%--0xaaaab6c03c58
+                          |          
+                          |--0.90%--0xaaaab6c03cac
+                          |          
+                          |--0.78%--0xaaaab6c03c1c
+                          |          operator new
+                          |          malloc
+                          |          0xffff9badf1a4
+                          |          
+                           --0.56%--0xffff9baec0d0
+                                     el0t_64_sync
+                                     el0t_64_sync_handler
+                                     el0_da
+                                     do_mem_abort
+                                     do_translation_fault
+                                     do_page_fault
+                                     handle_mm_fault
+                                     __handle_mm_fault
+
+    12.44%     0.00%  bench    bench                [.] 0x0000aaaab6c04a04
+            |
+            ---0xaaaab6c04a04
+               |          
+                --12.11%--std::chrono::_V2::steady_clock::now
+                          |          
+                           --11.66%--__kernel_clock_gettime
+
+    12.00%     0.00%  bench    bench                [.] 0x0000aaaab6c049cc
+            |
+            ---0xaaaab6c049cc
+               |          
+                --11.43%--std::chrono::_V2::steady_clock::now
+                          __kernel_clock_gettime
+
+     7.85%     0.00%  bench    libstdc++.so.6.0.30  [.] operator new
+            |
+            ---operator new
+               malloc
+               |          
+               |--3.14%--0xffff9badfcd0
+               |          el0t_64_sync
+               |          el0t_64_sync_handler
+               |          el0_da
+               |          |          
+               |           --3.03%--do_mem_abort
+               |                     do_translation_fault
+               |                     do_page_fault
+               |                     handle_mm_fault
+               |                     __handle_mm_fault
+               |                     |          
+               |                      --2.80%--vma_alloc_zeroed_movable_folio
+               |                                __folio_alloc_noprof
+               |                                __alloc_pages_noprof
+               |                                |          
+               |                                 --2.69%--__pi_clear_page
+               |          
+               |--0.78%--0xffff9badf1a4
+               |          
+                --0.56%--0xffff9badfce8
+
+     7.85%     1.46%  bench    libc.so.6            [.] malloc
+            |          
+            |--6.39%--malloc
+            |          |          
+            |          |--3.14%--0xffff9badfcd0
+            |          |          el0t_64_sync
+            |          |          el0t_64_sync_handler
+            |          |          el0_da
+            |          |          |          
+            |          |           --3.03%--do_mem_abort
+            |          |                     do_translation_fault
+            |          |                     do_page_fault
+            |          |                     handle_mm_fault
+            |          |                     __handle_mm_fault
+            |          |                     |          
+            |          |                      --2.80%--vma_alloc_zeroed_movable_folio
+            |          |                                __folio_alloc_noprof
+            |          |                                __alloc_pages_noprof
+            |          |                                |          
+            |          |                                 --2.69%--__pi_clear_page
+            |          |          
+            |          |--0.78%--0xffff9badf1a4
+            |          |          
+            |           --0.56%--0xffff9badfce8
+            |          
+             --1.46%--0xaaaab6c01670
+                       __libc_start_main
+                       0xffff9ba77400
+                       0xaaaab6c01444
+                       0xaaaab6c0514c
+                       |          
+                        --1.12%--0xaaaab6c04de0
+                                  0xaaaab6c03de4
+                                  operator new
+                                  malloc
+
+     6.95%     0.00%  bench    bench                [.] 0x0000aaaab6c03de4
+            |
+            ---0xaaaab6c03de4
+               |          
+               |--6.39%--operator new
+               |          malloc
+               |          |          
+               |           --3.14%--0xffff9badfcd0
+               |                     el0t_64_sync
+               |                     el0t_64_sync_handler
+               |                     el0_da
+               |                     |          
+               |                      --3.03%--do_mem_abort
+               |                                do_translation_fault
+               |                                do_page_fault
+               |                                handle_mm_fault
+               |                                __handle_mm_fault
+               |                                |          
+               |                                 --2.80%--vma_alloc_zeroed_movable_folio
+               |                                           __folio_alloc_noprof
+               |                                           __alloc_pages_noprof
+               |                                           |          
+               |                                            --2.69%--__pi_clear_page
+               |          
+                --0.56%--malloc@plt
+
+     6.61%     0.78%  bench    libc.so.6            [.] cfree
+            |          
+            |--5.83%--cfree
+            |          |          
+            |          |--2.91%--0xffff9bade61c
+            |          |          |          
+            |          |          |--0.90%--0xffff9badcf78
+            |          |          |          
+            |          |           --0.56%--0xffff9badcf44
+            |          |          
+            |          |--0.67%--0xffff9baddeec
+            |          |          
+            |           --0.56%--0xffff9baddfe0
+            |          
+             --0.78%--0xaaaab6c01670
+                       __libc_start_main
+                       0xffff9ba77400
+                       0xaaaab6c01444
+                       0xaaaab6c0514c
+
+     5.72%     5.72%  bench    bench                [.] 0x0000000000004e64
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04e64
+
+     5.72%     0.00%  bench    bench                [.] 0x0000aaaab6c04e64
+            |
+            ---0xaaaab6c04e64
+
+     5.27%     0.00%  bench    [kernel.kallsyms]    [k] el0t_64_sync
+            |
+            ---el0t_64_sync
+               el0t_64_sync_handler
+               |          
+                --4.93%--el0_da
+                          |          
+                           --4.82%--do_mem_abort
+                                     do_translation_fault
+                                     do_page_fault
+                                     handle_mm_fault
+                                     __handle_mm_fault
+                                     |          
+                                     |--3.48%--vma_alloc_zeroed_movable_folio
+                                     |          __folio_alloc_noprof
+                                     |          __alloc_pages_noprof
+                                     |          |          
+                                     |           --3.36%--__pi_clear_page
+                                     |          
+                                      --1.01%--do_huge_pmd_anonymous_page
+                                                __pi_clear_page
+
+     5.27%     0.00%  bench    [kernel.kallsyms]    [k] el0t_64_sync_handler
+            |
+            ---el0t_64_sync_handler
+               |          
+                --4.93%--el0_da
+                          |          
+                           --4.82%--do_mem_abort
+                                     do_translation_fault
+                                     do_page_fault
+                                     handle_mm_fault
+                                     __handle_mm_fault
+                                     |          
+                                     |--3.48%--vma_alloc_zeroed_movable_folio
+                                     |          __folio_alloc_noprof
+                                     |          __alloc_pages_noprof
+                                     |          |          
+                                     |           --3.36%--__pi_clear_page
+                                     |          
+                                      --1.01%--do_huge_pmd_anonymous_page
+                                                __pi_clear_page
+
+     4.93%     0.11%  bench    [kernel.kallsyms]    [k] el0_da
+            |          
+             --4.82%--el0_da
+                       do_mem_abort
+                       do_translation_fault
+                       do_page_fault
+                       handle_mm_fault
+                       __handle_mm_fault
+                       |          
+                       |--3.48%--vma_alloc_zeroed_movable_folio
+                       |          __folio_alloc_noprof
+                       |          __alloc_pages_noprof
+                       |          |          
+                       |           --3.36%--__pi_clear_page
+                       |          
+                        --1.01%--do_huge_pmd_anonymous_page
+                                  __pi_clear_page
+
+     4.82%     0.00%  bench    [kernel.kallsyms]    [k] do_mem_abort
+            |
+            ---do_mem_abort
+               do_translation_fault
+               do_page_fault
+               handle_mm_fault
+               __handle_mm_fault
+               |          
+               |--3.48%--vma_alloc_zeroed_movable_folio
+               |          __folio_alloc_noprof
+               |          __alloc_pages_noprof
+               |          |          
+               |           --3.36%--__pi_clear_page
+               |          
+                --1.01%--do_huge_pmd_anonymous_page
+                          __pi_clear_page
+
+     4.82%     0.00%  bench    [kernel.kallsyms]    [k] do_translation_fault
+            |
+            ---do_translation_fault
+               do_page_fault
+               handle_mm_fault
+               __handle_mm_fault
+               |          
+               |--3.48%--vma_alloc_zeroed_movable_folio
+               |          __folio_alloc_noprof
+               |          __alloc_pages_noprof
+               |          |          
+               |           --3.36%--__pi_clear_page
+               |          
+                --1.01%--do_huge_pmd_anonymous_page
+                          __pi_clear_page
+
+     4.82%     0.00%  bench    [kernel.kallsyms]    [k] do_page_fault
+            |
+            ---do_page_fault
+               handle_mm_fault
+               __handle_mm_fault
+               |          
+               |--3.48%--vma_alloc_zeroed_movable_folio
+               |          __folio_alloc_noprof
+               |          __alloc_pages_noprof
+               |          |          
+               |           --3.36%--__pi_clear_page
+               |          
+                --1.01%--do_huge_pmd_anonymous_page
+                          __pi_clear_page
+
+     4.82%     0.00%  bench    [kernel.kallsyms]    [k] handle_mm_fault
+            |
+            ---handle_mm_fault
+               __handle_mm_fault
+               |          
+               |--3.48%--vma_alloc_zeroed_movable_folio
+               |          __folio_alloc_noprof
+               |          __alloc_pages_noprof
+               |          |          
+               |           --3.36%--__pi_clear_page
+               |          
+                --1.01%--do_huge_pmd_anonymous_page
+                          __pi_clear_page
+
+     4.82%     0.00%  bench    [kernel.kallsyms]    [k] __handle_mm_fault
+            |
+            ---__handle_mm_fault
+               |          
+               |--3.48%--vma_alloc_zeroed_movable_folio
+               |          __folio_alloc_noprof
+               |          __alloc_pages_noprof
+               |          |          
+               |           --3.36%--__pi_clear_page
+               |          
+                --1.01%--do_huge_pmd_anonymous_page
+                          __pi_clear_page
+
+     4.37%     4.37%  bench    [kernel.kallsyms]    [k] __pi_clear_page
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               |          
+               |--3.48%--0xaaaab6c01444
+               |          0xaaaab6c0514c
+               |          0xaaaab6c04de0
+               |          |          
+               |          |--2.91%--0xaaaab6c03de4
+               |          |          operator new
+               |          |          malloc
+               |          |          |          
+               |          |           --2.69%--0xffff9badfcd0
+               |          |                     el0t_64_sync
+               |          |                     el0t_64_sync_handler
+               |          |                     el0_da
+               |          |                     do_mem_abort
+               |          |                     do_translation_fault
+               |          |                     do_page_fault
+               |          |                     handle_mm_fault
+               |          |                     __handle_mm_fault
+               |          |                     vma_alloc_zeroed_movable_folio
+               |          |                     __folio_alloc_noprof
+               |          |                     __alloc_pages_noprof
+               |          |                     __pi_clear_page
+               |          |          
+               |           --0.56%--0xaaaab6c03e68
+               |                     0xffff9baec0d0
+               |                     el0t_64_sync
+               |                     el0t_64_sync_handler
+               |                     el0_da
+               |                     do_mem_abort
+               |                     do_translation_fault
+               |                     do_page_fault
+               |                     handle_mm_fault
+               |                     __handle_mm_fault
+               |          
+                --0.90%--0xaaaab6c0141c
+
+     4.37%     4.37%  bench    bench                [.] 0x0000000000004e10
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04e10
+
+     4.37%     0.00%  bench    bench                [.] 0x0000aaaab6c04e10
+            |
+            ---0xaaaab6c04e10
+
+     4.26%     4.26%  bench    bench                [.] 0x0000000000004f74
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04f74
+
+     4.26%     0.00%  bench    bench                [.] 0x0000aaaab6c04f74
+            |
+            ---0xaaaab6c04f74
+
+     4.15%     4.15%  bench    bench                [.] 0x0000000000004f38
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04f38
+
+     4.15%     0.00%  bench    bench                [.] 0x0000aaaab6c04f38
+            |
+            ---0xaaaab6c04f38
+
+     3.81%     0.00%  bench    bench                [.] 0x0000aaaab6c03e68
+            |
+            ---0xaaaab6c03e68
+               |          
+               |--1.46%--0xaaaab6c03c58
+               |          
+               |--0.90%--0xaaaab6c03cac
+               |          
+               |--0.78%--0xaaaab6c03c1c
+               |          operator new
+               |          malloc
+               |          0xffff9badf1a4
+               |          
+                --0.56%--0xffff9baec0d0
+                          el0t_64_sync
+                          el0t_64_sync_handler
+                          el0_da
+                          do_mem_abort
+                          do_translation_fault
+                          do_page_fault
+                          handle_mm_fault
+                          __handle_mm_fault
+
+     3.48%     3.48%  bench    bench                [.] 0x0000000000004604
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c049f4
+               0xaaaab6c04604
+
+     3.48%     0.00%  bench    [kernel.kallsyms]    [k] vma_alloc_zeroed_movable_folio
+            |
+            ---vma_alloc_zeroed_movable_folio
+               __folio_alloc_noprof
+               __alloc_pages_noprof
+               |          
+                --3.36%--__pi_clear_page
+
+     3.48%     0.00%  bench    [kernel.kallsyms]    [k] __folio_alloc_noprof
+            |
+            ---__folio_alloc_noprof
+               __alloc_pages_noprof
+               |          
+                --3.36%--__pi_clear_page
+
+     3.48%     0.00%  bench    [kernel.kallsyms]    [k] __alloc_pages_noprof
+            |
+            ---__alloc_pages_noprof
+               |          
+                --3.36%--__pi_clear_page
+
+     3.48%     0.00%  bench    bench                [.] 0x0000aaaab6c04604
+            |
+            ---0xaaaab6c04604
+
+     3.25%     0.00%  bench    bench                [.] 0x0000aaaab6c0141c
+            |
+            ---0xaaaab6c0141c
+
+     3.14%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badfcd0
+            |
+            ---0xffff9badfcd0
+               el0t_64_sync
+               el0t_64_sync_handler
+               el0_da
+               |          
+                --3.03%--do_mem_abort
+                          do_translation_fault
+                          do_page_fault
+                          handle_mm_fault
+                          __handle_mm_fault
+                          |          
+                           --2.80%--vma_alloc_zeroed_movable_folio
+                                     __folio_alloc_noprof
+                                     __alloc_pages_noprof
+                                     |          
+                                      --2.69%--__pi_clear_page
+
+     2.91%     2.91%  bench    bench                [.] 0x0000000000004454
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c049f4
+               0xaaaab6c04454
+
+     2.91%     0.00%  bench    bench                [.] 0x0000aaaab6c04b58
+            |
+            ---0xaaaab6c04b58
+               cfree
+               0xffff9bade61c
+               |          
+               |--0.90%--0xffff9badcf78
+               |          
+                --0.56%--0xffff9badcf44
+
+     2.91%     0.00%  bench    libc.so.6            [.] 0x0000ffff9bade61c
+            |
+            ---0xffff9bade61c
+               |          
+               |--0.90%--0xffff9badcf78
+               |          
+                --0.56%--0xffff9badcf44
+
+     2.91%     0.00%  bench    bench                [.] 0x0000aaaab6c04454
+            |
+            ---0xaaaab6c04454
+
+     2.58%     2.58%  bench    bench                [.] 0x0000000000004610
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c049f4
+               0xaaaab6c04610
+
+     2.58%     0.00%  bench    bench                [.] 0x0000aaaab6c04b28
+            |
+            ---0xaaaab6c04b28
+               |          
+                --2.24%--cfree
+
+     2.58%     0.00%  bench    bench                [.] 0x0000aaaab6c04610
+            |
+            ---0xaaaab6c04610
+
+     2.13%     2.13%  bench    bench                [.] 0x0000000000004358
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c049f4
+               0xaaaab6c04358
+
+     2.13%     2.13%  bench    bench                [.] 0x0000000000004480
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c049f4
+               0xaaaab6c04480
+
+     2.13%     0.00%  bench    bench                [.] 0x0000aaaab6c04358
+            |
+            ---0xaaaab6c04358
+
+     2.13%     0.00%  bench    bench                [.] 0x0000aaaab6c04480
+            |
+            ---0xaaaab6c04480
+
+     1.79%     1.79%  bench    bench                [.] 0x0000000000004f40
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04f40
+
+     1.79%     0.00%  bench    bench                [.] 0x0000aaaab6c04f40
+            |
+            ---0xaaaab6c04f40
+
+     1.68%     1.68%  bench    bench                [.] 0x0000000000004330
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c049f4
+               0xaaaab6c04330
+
+     1.68%     0.00%  bench    bench                [.] 0x0000aaaab6c04330
+            |
+            ---0xaaaab6c04330
+
+     1.46%     1.46%  bench    bench                [.] 0x0000000000003c58
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04de0
+               0xaaaab6c03e68
+               0xaaaab6c03c58
+
+     1.46%     1.46%  bench    bench                [.] 0x0000000000004e18
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04e18
+
+     1.46%     0.00%  bench    bench                [.] 0x0000aaaab6c03c58
+            |
+            ---0xaaaab6c03c58
+
+     1.46%     0.00%  bench    bench                [.] 0x0000aaaab6c04e18
+            |
+            ---0xaaaab6c04e18
+
+     1.23%     1.23%  bench    libc.so.6            [.] 0x000000000008cf78
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               |          
+                --0.90%--0xaaaab6c04b58
+                          cfree
+                          0xffff9bade61c
+                          0xffff9badcf78
+
+     1.23%     1.23%  bench    bench                [.] 0x00000000000043c0
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c049f4
+               0xaaaab6c043c0
+
+     1.23%     0.00%  bench    bench                [.] 0x0000aaaab6c043c0
+            |
+            ---0xaaaab6c043c0
+
+     1.23%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badcf78
+            |
+            ---0xffff9badcf78
+
+     1.12%     1.12%  bench    bench                [.] 0x00000000000045ec
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c049f4
+               0xaaaab6c045ec
+
+     1.12%     0.00%  bench    bench                [.] 0x0000aaaab6c045ec
+            |
+            ---0xaaaab6c045ec
+
+     1.01%     1.01%  bench    bench                [.] 0x0000000000004f2c
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04f2c
+
+     1.01%     0.00%  bench    [kernel.kallsyms]    [k] do_huge_pmd_anonymous_page
+            |
+            ---do_huge_pmd_anonymous_page
+               __pi_clear_page
+
+     1.01%     0.00%  bench    bench                [.] 0x0000aaaab6c04f2c
+            |
+            ---0xaaaab6c04f2c
+
+     0.90%     0.90%  bench    bench                [.] 0x0000000000003cac
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04de0
+               0xaaaab6c03e68
+               0xaaaab6c03cac
+
+     0.90%     0.90%  bench    bench                [.] 0x00000000000044e8
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c049f4
+               0xaaaab6c044e8
+
+     0.90%     0.90%  bench    bench                [.] 0x0000000000004e70
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04e70
+
+     0.90%     0.00%  bench    bench                [.] 0x0000aaaab6c045a4
+            |
+            ---0xaaaab6c045a4
+               |          
+                --0.78%--cfree
+
+     0.90%     0.00%  bench    bench                [.] 0x0000aaaab6c03cac
+            |
+            ---0xaaaab6c03cac
+
+     0.90%     0.00%  bench    bench                [.] 0x0000aaaab6c044e8
+            |
+            ---0xaaaab6c044e8
+
+     0.90%     0.00%  bench    bench                [.] 0x0000aaaab6c04e70
+            |
+            ---0xaaaab6c04e70
+
+     0.78%     0.00%  bench    bench                [.] 0x0000aaaab6c03c1c
+            |
+            ---0xaaaab6c03c1c
+               operator new
+               malloc
+               0xffff9badf1a4
+
+     0.78%     0.00%  bench    bench                [.] 0x0000aaaab6c04c74
+            |
+            ---0xaaaab6c04c74
+
+     0.78%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badf1a4
+            |
+            ---0xffff9badf1a4
+
+     0.78%     0.00%  bench    bench                [.] 0x0000aaaab6c08a10
+            |
+            ---0xaaaab6c08a10
+
+     0.67%     0.67%  bench    libc.so.6            [.] 0x000000000008deec
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+
+     0.67%     0.67%  bench    bench                [.] 0x0000000000001224
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c01224
+
+     0.67%     0.67%  bench    bench                [.] 0x0000000000004e00
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04e00
+
+     0.67%     0.67%  bench    bench                [.] 0x0000000000004e04
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04e04
+
+     0.67%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badcf44
+            |
+            ---0xffff9badcf44
+
+     0.67%     0.00%  bench    bench                [.] 0x0000aaaab6c01224
+            |
+            ---0xaaaab6c01224
+
+     0.67%     0.00%  bench    bench                [.] 0x0000aaaab6c04e00
+            |
+            ---0xaaaab6c04e00
+
+     0.67%     0.00%  bench    bench                [.] 0x0000aaaab6c04e04
+            |
+            ---0xaaaab6c04e04
+
+     0.67%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baddeec
+            |
+            ---0xffff9baddeec
+
+     0.56%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badfce8
+            |
+            ---0xffff9badfce8
+
+     0.56%     0.56%  bench    libc.so.6            [.] 0x000000000008cdd0
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+
+     0.56%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baec0d0
+            |
+            ---0xffff9baec0d0
+               el0t_64_sync
+               el0t_64_sync_handler
+               el0_da
+               do_mem_abort
+               do_translation_fault
+               do_page_fault
+               handle_mm_fault
+               __handle_mm_fault
+
+     0.56%     0.56%  bench    libc.so.6            [.] 0x000000000008dfe0
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+
+     0.56%     0.56%  bench    libstdc++.so.6.0.30  [.] malloc@plt
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04de0
+               0xaaaab6c03de4
+               malloc@plt
+
+     0.56%     0.56%  bench    bench                [.] 0x00000000000045f8
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c049f4
+               0xaaaab6c045f8
+
+     0.56%     0.56%  bench    libc.so.6            [.] clock_gettime
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+
+     0.56%     0.56%  bench    bench                [.] 0x00000000000049e4
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c049e4
+
+     0.56%     0.56%  bench    bench                [.] 0x0000000000004df4
+            |
+            ---0xaaaab6c01670
+               __libc_start_main
+               0xffff9ba77400
+               0xaaaab6c01444
+               0xaaaab6c0514c
+               0xaaaab6c04df4
+
+     0.56%     0.00%  bench    bench                [.] 0x0000aaaab6c04d0c
+            |
+            ---0xaaaab6c04d0c
+
+     0.56%     0.00%  bench    bench                [.] 0x0000aaaab6c045f8
+            |
+            ---0xaaaab6c045f8
+
+     0.56%     0.00%  bench    bench                [.] 0x0000aaaab6c049e4
+            |
+            ---0xaaaab6c049e4
+
+     0.56%     0.00%  bench    bench                [.] 0x0000aaaab6c04df4
+            |
+            ---0xaaaab6c04df4
+
+     0.56%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badcdd0
+            |
+            ---0xffff9badcdd0
+
+     0.56%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baddfe0
+            |
+            ---0xffff9baddfe0
+
+     0.45%     0.00%  bench    bench                [.] 0x0000aaaab6c08db0
+     0.45%     0.45%  bench    libc.so.6            [.] 0x000000000008f41c
+     0.45%     0.45%  bench    libc.so.6            [.] 0x000000000008ce98
+     0.45%     0.45%  bench    libc.so.6            [.] 0x000000000008df98
+     0.45%     0.45%  bench    bench                [.] 0x0000000000001214
+     0.45%     0.45%  bench    bench                [.] 0x0000000000008878
+     0.45%     0.45%  bench    libstdc++.so.6.0.30  [.] free@plt
+     0.45%     0.45%  bench    libstdc++.so.6.0.30  [.] operator delete@plt
+     0.45%     0.45%  bench    bench                [.] 0x0000000000008ba4
+     0.45%     0.00%  bench    bench                [.] 0x0000aaaab6c08b9c
+     0.45%     0.00%  bench    bench                [.] 0x0000aaaab6c01214
+     0.45%     0.00%  bench    bench                [.] 0x0000aaaab6c08878
+     0.45%     0.00%  bench    bench                [.] 0x0000aaaab6c08ba4
+     0.45%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badce98
+     0.45%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baddf98
+     0.45%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badf41c
+     0.34%     0.00%  bench    [kernel.kallsyms]    [k] el0_svc
+     0.34%     0.00%  bench    bench                [.] 0x0000aaaab6c02740
+     0.34%     0.00%  bench    [kernel.kallsyms]    [k] do_el0_svc
+     0.34%     0.00%  bench    [kernel.kallsyms]    [k] invoke_syscall.constprop.0
+     0.34%     0.34%  bench    libc.so.6            [.] 0x000000000008cf08
+     0.34%     0.34%  bench    libc.so.6            [.] 0x000000000008cf1c
+     0.34%     0.00%  bench    libc.so.6            [.] 0x0000ffff9bade9f4
+     0.34%     0.00%  bench    bench                [.] 0x0000aaaab6c08d20
+     0.34%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baddc3c
+     0.34%     0.34%  bench    libc.so.6            [.] 0x000000000008deb0
+     0.34%     0.34%  bench    bench                [.] 0x00000000000011b4
+     0.34%     0.34%  bench    bench                [.] 0x00000000000044dc
+     0.34%     0.34%  bench    libstdc++.so.6.0.30  [.] clock_gettime@plt
+     0.34%     0.34%  bench    bench                [.] 0x0000000000004e74
+     0.34%     0.34%  bench    bench                [.] 0x0000000000004f80
+     0.34%     0.34%  bench    libstdc++.so.6.0.30  [.] std::_Rb_tree_increment
+     0.34%     0.00%  bench    bench                [.] 0x0000aaaab6c02ad4
+     0.34%     0.00%  bench    bench                [.] 0x0000aaaab6c08cec
+     0.34%     0.00%  bench    bench                [.] 0x0000aaaab6c011b4
+     0.34%     0.00%  bench    bench                [.] 0x0000aaaab6c044dc
+     0.34%     0.00%  bench    bench                [.] 0x0000aaaab6c04e74
+     0.34%     0.00%  bench    bench                [.] 0x0000aaaab6c04f80
+     0.34%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badcf08
+     0.34%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badcf1c
+     0.34%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baddeb0
+     0.22%     0.22%  bench    [kernel.kallsyms]    [k] __mod_memcg_lruvec_state
+     0.22%     0.22%  bench    [kernel.kallsyms]    [k] __mem_cgroup_charge
+     0.22%     0.00%  bench    libc.so.6            [.] 0x0000ffff9bade9bc
+     0.22%     0.22%  bench    libc.so.6            [.] 0x000000000008f3a4
+     0.22%     0.22%  bench    libc.so.6            [.] 0x000000000008f500
+     0.22%     0.22%  bench    libc.so.6            [.] 0x000000000008f830
+     0.22%     0.22%  bench    libc.so.6            [.] 0x000000000008cedc
+     0.22%     0.22%  bench    libc.so.6            [.] 0x000000000008e008
+     0.22%     0.22%  bench    bench                [.] 0x00000000000011c4
+     0.22%     0.22%  bench    bench                [.] 0x00000000000029f4
+     0.22%     0.22%  bench    bench                [.] 0x0000000000003d58
+     0.22%     0.22%  bench    bench                [.] 0x0000000000003d60
+     0.22%     0.22%  bench    bench                [.] 0x00000000000042dc
+     0.22%     0.22%  bench    bench                [.] 0x0000000000004364
+     0.22%     0.22%  bench    bench                [.] 0x0000000000004474
+     0.22%     0.22%  bench    bench                [.] 0x000000000000448c
+     0.22%     0.22%  bench    libc.so.6            [.] 0x000000000008e000
+     0.22%     0.22%  bench    bench                [.] 0x0000000000003dd0
+     0.22%     0.22%  bench    bench                [.] 0x00000000000049e0
+     0.22%     0.22%  bench    bench                [.] 0x0000000000004f1c
+     0.22%     0.22%  bench    bench                [.] 0x0000000000008888
+     0.22%     0.22%  bench    bench                [.] 0x00000000000089a4
+     0.22%     0.22%  bench    bench                [.] 0x0000000000008a54
+     0.22%     0.22%  bench    bench                [.] 0x0000000000008d54
+     0.22%     0.00%  bench    [kernel.kallsyms]    [k] __lruvec_stat_mod_folio
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c02aac
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c08cd8
+     0.22%     0.00%  bench    [kernel.kallsyms]    [k] __mod_lruvec_state
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c08bd0
+     0.22%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badcf84
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c011c4
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c029f4
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c03d58
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c03d60
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c03dd0
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c042dc
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c04364
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c04474
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c0448c
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c049e0
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c04f1c
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c08888
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c089a4
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c08a54
+     0.22%     0.00%  bench    bench                [.] 0x0000aaaab6c08d54
+     0.22%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badcedc
+     0.22%     0.00%  bench    libc.so.6            [.] 0x0000ffff9bade000
+     0.22%     0.00%  bench    libc.so.6            [.] 0x0000ffff9bade008
+     0.22%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badf3a4
+     0.22%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badf500
+     0.22%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badf830
+     0.11%     0.11%  bench    [kernel.kallsyms]    [k] __rmqueue_pcplist
+     0.11%     0.11%  bench    [kernel.kallsyms]    [k] prepend_path
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c01450
+     0.11%     0.00%  bench    [unknown]            [k] 0x0000ffff7eb0a70c
+     0.11%     0.00%  bench    libc.so.6            [.] __munmap
+     0.11%     0.11%  bench    [kernel.kallsyms]    [k] __mem_cgroup_uncharge_folios
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] __arm64_sys_execve
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baeac80
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008cf28
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] __arm64_sys_munmap
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] do_execveat_common
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] __arm64_sys_exit_group
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] __vm_munmap
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] bprm_execve
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c08c0c
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c08d14
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008c74c
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008cd60
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008cd78
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008cd8c
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008efac
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008f0fc
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008f3fc
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008f4f0
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008f790
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008f900
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] do_group_exit
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] do_vmi_munmap
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] load_elf_binary
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008cf48
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008dec4
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] do_exit
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] do_vmi_align_munmap.isra.0
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] elf_load
+     0.11%     0.11%  bench    bench                [.] 0x0000000000003c40
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008debc
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008ded8
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008df04
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008df34
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008df40
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008df70
+     0.11%     0.11%  bench    libc.so.6            [.] 0x000000000008dfa0
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] mmput
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] unmap_region
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] vm_mmap
+     0.11%     0.11%  bench    bench                [.] 0x0000000000002a08
+     0.11%     0.11%  bench    bench                [.] 0x0000000000002a44
+     0.11%     0.11%  bench    bench                [.] 0x0000000000002a94
+     0.11%     0.11%  bench    bench                [.] 0x0000000000003d78
+     0.11%     0.11%  bench    bench                [.] 0x0000000000003db0
+     0.11%     0.11%  bench    bench                [.] 0x0000000000003db4
+     0.11%     0.11%  bench    bench                [.] 0x0000000000003ddc
+     0.11%     0.11%  bench    bench                [.] 0x0000000000003e20
+     0.11%     0.11%  bench    bench                [.] 0x0000000000003e90
+     0.11%     0.11%  bench    bench                [.] 0x0000000000004298
+     0.11%     0.11%  bench    bench                [.] 0x00000000000042b8
+     0.11%     0.11%  bench    bench                [.] 0x0000000000004308
+     0.11%     0.11%  bench    bench                [.] 0x00000000000043b4
+     0.11%     0.11%  bench    bench                [.] 0x00000000000043fc
+     0.11%     0.11%  bench    bench                [.] 0x0000000000004510
+     0.11%     0.11%  bench    bench                [.] 0x0000000000004578
+     0.11%     0.11%  bench    bench                [.] 0x00000000000045f4
+     0.11%     0.11%  bench    bench                [.] 0x0000000000004618
+     0.11%     0.11%  bench    bench                [.] 0x0000000000004658
+     0.11%     0.11%  bench    bench                [.] 0x0000000000008788
+     0.11%     0.11%  bench    bench                [.] 0x0000000000008804
+     0.11%     0.11%  bench    bench                [.] 0x000000000000883c
+     0.11%     0.11%  bench    libstdc++.so.6.0.30  [.] std::_Rb_tree_insert_and_rebalance
+     0.11%     0.11%  bench    libstdc++.so.6.0.30  [.] std::__detail::_Prime_rehash_policy::_M_need_rehash
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] __mmput
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] unmap_vmas
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] vm_mmap_pgoff
+     0.11%     0.11%  bench    bench                [.] 0x0000000000004c7c
+     0.11%     0.11%  bench    bench                [.] 0x0000000000004cc8
+     0.11%     0.11%  bench    bench                [.] 0x0000000000004d60
+     0.11%     0.11%  bench    bench                [.] 0x0000000000004f10
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] do_mmap
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] exit_mmap
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] unmap_single_vma.isra.0
+     0.11%     0.11%  bench    bench                [.] 0x0000000000008cc8
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] mmap_region
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] tlb_finish_mmu
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] unmap_page_range
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] __tlb_batch_free_encoded_pages
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] folio_add_new_anon_rmap
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] folio_remove_rmap_ptes
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] perf_event_mmap
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] file_path
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] free_pages_and_swap_cache
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c08d64
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] d_path
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] folios_put_refs
+     0.11%     0.00%  bench    [kernel.kallsyms]    [k] get_page_from_freelist
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c04e44
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c08cbc
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c02a08
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c02a44
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c02a94
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c03c40
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c03d78
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c03db0
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c03db4
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c03ddc
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c03e20
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c03e90
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c04298
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c042b8
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c04308
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c043b4
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c043fc
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c04510
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c04578
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c045f4
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c04618
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c04658
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c04c7c
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c04cc8
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c04d60
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c04f10
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c08788
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c08804
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c0883c
+     0.11%     0.00%  bench    bench                [.] 0x0000aaaab6c08cc8
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badc74c
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badcd60
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badcd78
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badcd8c
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badcf28
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badcf48
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baddebc
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baddec4
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badded8
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baddf04
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baddf34
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baddf40
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baddf70
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9baddfa0
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badefac
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badf0fc
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badf3fc
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badf4f0
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badf790
+     0.11%     0.00%  bench    libc.so.6            [.] 0x0000ffff9badf900
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
