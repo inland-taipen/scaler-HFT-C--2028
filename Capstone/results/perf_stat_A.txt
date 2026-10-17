@@ -1,47 +1,52 @@
-impl=A runs=5
-  ns/add    225.6
-  ns/cancel 418.0
-  ns/bbo    32.9
-  ns/depth  433.6
-  final bid: has=1 px=9999 qty=2668
-  final ask: has=1 px=10001 qty=2486
+impl=A runs=5 ops=1000000 (median of runs)
+  total_ms  358.3
+  ns/add    283.9
+  ns/cancel 632.2
+  ns/bbo    36.1
+  ns/depth  481.9
+  final bid: has=1 px=99.99 qty=2668
+  final ask: has=1 px=100.01 qty=2486
   checksum 483587156
-impl=A runs=5
-  ns/add    200.5
-  ns/cancel 371.7
-  ns/bbo    32.4
-  ns/depth  406.5
-  final bid: has=1 px=9999 qty=2668
-  final ask: has=1 px=10001 qty=2486
+impl=A runs=5 ops=1000000 (median of runs)
+  total_ms  316.1
+  ns/add    237.5
+  ns/cancel 574.0
+  ns/bbo    35.6
+  ns/depth  464.8
+  final bid: has=1 px=99.99 qty=2668
+  final ask: has=1 px=100.01 qty=2486
   checksum 483587156
-impl=A runs=5
-  ns/add    224.7
-  ns/cancel 437.5
-  ns/bbo    33.3
-  ns/depth  448.0
-  final bid: has=1 px=9999 qty=2668
-  final ask: has=1 px=10001 qty=2486
+impl=A runs=5 ops=1000000 (median of runs)
+  total_ms  321.6
+  ns/add    239.3
+  ns/cancel 595.5
+  ns/bbo    34.5
+  ns/depth  458.3
+  final bid: has=1 px=99.99 qty=2668
+  final ask: has=1 px=100.01 qty=2486
   checksum 483587156
-impl=A runs=5
-  ns/add    233.0
-  ns/cancel 398.6
-  ns/bbo    34.9
-  ns/depth  463.2
-  final bid: has=1 px=9999 qty=2668
-  final ask: has=1 px=10001 qty=2486
+impl=A runs=5 ops=1000000 (median of runs)
+  total_ms  316.7
+  ns/add    236.8
+  ns/cancel 582.6
+  ns/bbo    34.8
+  ns/depth  435.9
+  final bid: has=1 px=99.99 qty=2668
+  final ask: has=1 px=100.01 qty=2486
   checksum 483587156
-impl=A runs=5
-  ns/add    198.1
-  ns/cancel 376.8
-  ns/bbo    32.3
-  ns/depth  418.6
-  final bid: has=1 px=9999 qty=2668
-  final ask: has=1 px=10001 qty=2486
+impl=A runs=5 ops=1000000 (median of runs)
+  total_ms  320.6
+  ns/add    241.5
+  ns/cancel 565.0
+  ns/bbo    34.8
+  ns/depth  440.7
+  final bid: has=1 px=99.99 qty=2668
+  final ask: has=1 px=100.01 qty=2486
   checksum 483587156
 
  Performance counter stats for './build/bench --impl A' (5 runs):
 
-           1494.64 msec task-clock                       #    0.985 CPUs utilized               ( +-  1.31% )
+           1841.15 msec task-clock                       #    0.981 CPUs utilized               ( +-  1.81% )
    <not supported>      cycles                                                                
    <not supported>      instructions                                                          
    <not supported>      branches                                                              
@@ -49,7 +54,7 @@ impl=A runs=5
    <not supported>      cache-misses                                                          
    <not supported>      L1-dcache-load-misses                                                 
    <not supported>      dTLB-load-misses                                                      
-             16715      page-faults                      #   11.183 K/sec                       ( +-  0.00% )
+             16715      page-faults                      #    9.079 K/sec                       ( +-  0.00% )
 
-            1.5170 +- 0.0236 seconds time elapsed  ( +-  1.56% )
+            1.8760 +- 0.0361 seconds time elapsed  ( +-  1.93% )
 

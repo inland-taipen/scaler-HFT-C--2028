@@ -3,1335 +3,358 @@
 #
 # Total Lost Samples: 0
 #
-# Samples: 322  of event 'cpu-clock:pppH'
-# Event count (approx.): 80500000
+# Samples: 688  of event 'task-clock:ppp'
+# Event count (approx.): 172000000
 #
-# Children      Self  Command  Shared Object      Symbol                        
-# ........  ........  .......  .................  ..............................
+# Overhead  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 IPC   [IPC Coverage]
+# ........  .....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................  ....................
 #
-   100.00%     0.00%  bench    bench              [.] 0x0000aaaaca111670
+    27.47%  [.] 0x0000000000000b5c                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
             |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               |          
-               |--93.79%--0xaaaaca111518
-               |          0xaaaaca1137dc
-               |          |          
-               |          |--40.37%--0xaaaaca112d5c
-               |          |          |          
-               |          |          |--37.27%--0xffffa2ac7c6c
-               |          |          |          __kernel_clock_gettime
-               |          |          |          
-               |          |          |--2.17%--0xffffa2a9a354
-               |          |          |          
-               |          |           --0.62%--0xffffa2ac7c98
-               |          |          
-               |          |--29.50%--0xaaaaca112cc4
-               |          |          |          
-               |          |          |--28.26%--0xffffa2ac7c6c
-               |          |          |          __kernel_clock_gettime
-               |          |          |          
-               |          |           --0.93%--0xffffa2ac7c98
-               |          |          
-               |          |--7.14%--0xaaaaca113348
-               |          |          |          
-               |          |          |--1.86%--0xaaaaca112884
-               |          |          |          |          
-               |          |          |           --1.24%--el0t_64_sync
-               |          |          |                     el0t_64_sync_handler
-               |          |          |                     el0_da
-               |          |          |                     do_mem_abort
-               |          |          |                     do_translation_fault
-               |          |          |                     do_page_fault
-               |          |          |                     handle_mm_fault
-               |          |          |                     |          
-               |          |          |                      --0.93%--__handle_mm_fault
-               |          |          |                                __mem_cgroup_charge
-               |          |          |                                |          
-               |          |          |                                 --0.62%--try_charge_memcg
-               |          |          |          
-               |          |          |--1.55%--0xffffa28eac80
-               |          |          |          el0t_64_sync
-               |          |          |          el0t_64_sync_handler
-               |          |          |          el0_da
-               |          |          |          |          
-               |          |          |           --1.24%--do_mem_abort
-               |          |          |                     do_translation_fault
-               |          |          |                     do_page_fault
-               |          |          |                     handle_mm_fault
-               |          |          |                     __handle_mm_fault
-               |          |          |                     |          
-               |          |          |                      --0.93%--do_huge_pmd_anonymous_page
-               |          |          |                                __pi_clear_page
-               |          |          |          
-               |          |          |--0.93%--0xffffa28eac8c
-               |          |          |          
-               |          |          |--0.93%--0xaaaaca1127c4
-               |          |          |          
-               |          |          |--0.62%--0xffffa28eac70
-               |          |          |          el0t_64_sync
-               |          |          |          el0t_64_sync_handler
-               |          |          |          el0_da
-               |          |          |          
-               |          |           --0.62%--0xaaaaca112948
-               |          |                     0xffffa2aa343c
-               |          |                     0xffffa28e0754
-               |          |                     0xffffa28dfce8
-               |          |          
-               |          |--2.17%--0xaaaaca113218
-               |          |          
-               |          |--2.17%--0xaaaaca112cdc
-               |          |          
-               |          |--1.86%--0xaaaaca113130
-               |          |          
-               |          |--1.55%--0xaaaaca111224
-               |          |          
-               |          |--1.24%--0xaaaaca112d70
-               |          |          
-               |          |--0.93%--0xaaaaca113254
-               |          |          |          
-               |          |           --0.62%--0xaaaaca112aac
-               |          |          
-               |          |--0.93%--0xaaaaca113244
-               |          |          |          
-               |          |           --0.62%--0xaaaaca112ad4
-               |          |                     0xffffa2aa343c
-               |          |          
-               |          |--0.93%--0xaaaaca11315c
-               |          |          
-               |          |--0.62%--0xaaaaca113120
-               |          |          
-               |          |--0.62%--0xaaaaca1130dc
-               |          |          
-               |           --0.62%--0xaaaaca112edc
-               |          
-                --6.21%--0xaaaaca11141c
-                          |          
-                          |--1.86%--0xaaaaca118d54
-                          |          
-                          |--1.24%--0xaaaaca118b9c
-                          |          |          
-                          |           --0.62%--0xaaaaca118a10
-                          |          
-                          |--0.62%--0xaaaaca118cec
-                          |          0xaaaaca118a10
-                          |          
-                          |--0.62%--0xaaaaca118cc8
-                          |          
-                           --0.62%--0xaaaaca118ba4
+            ---clock_gettime@@GLIBC_2.17
+               std::chrono::_V2::steady_clock::now()
+               RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+               void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
 
-   100.00%     0.00%  bench     (deleted)         [.] 0x0000ffffa28774d8
+    13.81%  [.] RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)                                                                                                                                                                                                                                                                                                                                                                                                             -      -            
             |
-            ---0xffffa28774d8
-               0xffffa2877400
-               |          
-               |--93.79%--0xaaaaca111518
-               |          0xaaaaca1137dc
-               |          |          
-               |          |--40.37%--0xaaaaca112d5c
-               |          |          |          
-               |          |          |--37.27%--0xffffa2ac7c6c
-               |          |          |          __kernel_clock_gettime
-               |          |          |          
-               |          |          |--2.17%--0xffffa2a9a354
-               |          |          |          
-               |          |           --0.62%--0xffffa2ac7c98
-               |          |          
-               |          |--29.50%--0xaaaaca112cc4
-               |          |          |          
-               |          |          |--28.26%--0xffffa2ac7c6c
-               |          |          |          __kernel_clock_gettime
-               |          |          |          
-               |          |           --0.93%--0xffffa2ac7c98
-               |          |          
-               |          |--7.14%--0xaaaaca113348
-               |          |          |          
-               |          |          |--1.86%--0xaaaaca112884
-               |          |          |          |          
-               |          |          |           --1.24%--el0t_64_sync
-               |          |          |                     el0t_64_sync_handler
-               |          |          |                     el0_da
-               |          |          |                     do_mem_abort
-               |          |          |                     do_translation_fault
-               |          |          |                     do_page_fault
-               |          |          |                     handle_mm_fault
-               |          |          |                     |          
-               |          |          |                      --0.93%--__handle_mm_fault
-               |          |          |                                __mem_cgroup_charge
-               |          |          |                                |          
-               |          |          |                                 --0.62%--try_charge_memcg
-               |          |          |          
-               |          |          |--1.55%--0xffffa28eac80
-               |          |          |          el0t_64_sync
-               |          |          |          el0t_64_sync_handler
-               |          |          |          el0_da
-               |          |          |          |          
-               |          |          |           --1.24%--do_mem_abort
-               |          |          |                     do_translation_fault
-               |          |          |                     do_page_fault
-               |          |          |                     handle_mm_fault
-               |          |          |                     __handle_mm_fault
-               |          |          |                     |          
-               |          |          |                      --0.93%--do_huge_pmd_anonymous_page
-               |          |          |                                __pi_clear_page
-               |          |          |          
-               |          |          |--0.93%--0xffffa28eac8c
-               |          |          |          
-               |          |          |--0.93%--0xaaaaca1127c4
-               |          |          |          
-               |          |          |--0.62%--0xffffa28eac70
-               |          |          |          el0t_64_sync
-               |          |          |          el0t_64_sync_handler
-               |          |          |          el0_da
-               |          |          |          
-               |          |           --0.62%--0xaaaaca112948
-               |          |                     0xffffa2aa343c
-               |          |                     0xffffa28e0754
-               |          |                     0xffffa28dfce8
-               |          |          
-               |          |--2.17%--0xaaaaca113218
-               |          |          
-               |          |--2.17%--0xaaaaca112cdc
-               |          |          
-               |          |--1.86%--0xaaaaca113130
-               |          |          
-               |          |--1.55%--0xaaaaca111224
-               |          |          
-               |          |--1.24%--0xaaaaca112d70
-               |          |          
-               |          |--0.93%--0xaaaaca113254
-               |          |          |          
-               |          |           --0.62%--0xaaaaca112aac
-               |          |          
-               |          |--0.93%--0xaaaaca113244
-               |          |          |          
-               |          |           --0.62%--0xaaaaca112ad4
-               |          |                     0xffffa2aa343c
-               |          |          
-               |          |--0.93%--0xaaaaca11315c
-               |          |          
-               |          |--0.62%--0xaaaaca113120
-               |          |          
-               |          |--0.62%--0xaaaaca1130dc
-               |          |          
-               |           --0.62%--0xaaaaca112edc
-               |          
-                --6.21%--0xaaaaca11141c
-                          |          
-                          |--1.86%--0xaaaaca118d54
-                          |          
-                          |--1.24%--0xaaaaca118b9c
-                          |          |          
-                          |           --0.62%--0xaaaaca118a10
-                          |          
-                          |--0.62%--0xaaaaca118cec
-                          |          0xaaaaca118a10
-                          |          
-                          |--0.62%--0xaaaaca118cc8
-                          |          
-                           --0.62%--0xaaaaca118ba4
+            ---void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
 
-   100.00%     0.00%  bench     (deleted)         [.] 0x0000ffffa2877400
+    12.21%  [.] ob::make_workload(unsigned long, unsigned int)                                                                                                                                                                                                                                                                                                                                                                                                                                                     -      -            
             |
-            ---0xffffa2877400
-               |          
-               |--93.79%--0xaaaaca111518
-               |          0xaaaaca1137dc
-               |          |          
-               |          |--40.37%--0xaaaaca112d5c
-               |          |          |          
-               |          |          |--37.27%--0xffffa2ac7c6c
-               |          |          |          __kernel_clock_gettime
-               |          |          |          
-               |          |          |--2.17%--0xffffa2a9a354
-               |          |          |          
-               |          |           --0.62%--0xffffa2ac7c98
-               |          |          
-               |          |--29.50%--0xaaaaca112cc4
-               |          |          |          
-               |          |          |--28.26%--0xffffa2ac7c6c
-               |          |          |          __kernel_clock_gettime
-               |          |          |          
-               |          |           --0.93%--0xffffa2ac7c98
-               |          |          
-               |          |--7.14%--0xaaaaca113348
-               |          |          |          
-               |          |          |--1.86%--0xaaaaca112884
-               |          |          |          |          
-               |          |          |           --1.24%--el0t_64_sync
-               |          |          |                     el0t_64_sync_handler
-               |          |          |                     el0_da
-               |          |          |                     do_mem_abort
-               |          |          |                     do_translation_fault
-               |          |          |                     do_page_fault
-               |          |          |                     handle_mm_fault
-               |          |          |                     |          
-               |          |          |                      --0.93%--__handle_mm_fault
-               |          |          |                                __mem_cgroup_charge
-               |          |          |                                |          
-               |          |          |                                 --0.62%--try_charge_memcg
-               |          |          |          
-               |          |          |--1.55%--0xffffa28eac80
-               |          |          |          el0t_64_sync
-               |          |          |          el0t_64_sync_handler
-               |          |          |          el0_da
-               |          |          |          |          
-               |          |          |           --1.24%--do_mem_abort
-               |          |          |                     do_translation_fault
-               |          |          |                     do_page_fault
-               |          |          |                     handle_mm_fault
-               |          |          |                     __handle_mm_fault
-               |          |          |                     |          
-               |          |          |                      --0.93%--do_huge_pmd_anonymous_page
-               |          |          |                                __pi_clear_page
-               |          |          |          
-               |          |          |--0.93%--0xffffa28eac8c
-               |          |          |          
-               |          |          |--0.93%--0xaaaaca1127c4
-               |          |          |          
-               |          |          |--0.62%--0xffffa28eac70
-               |          |          |          el0t_64_sync
-               |          |          |          el0t_64_sync_handler
-               |          |          |          el0_da
-               |          |          |          
-               |          |           --0.62%--0xaaaaca112948
-               |          |                     0xffffa2aa343c
-               |          |                     0xffffa28e0754
-               |          |                     0xffffa28dfce8
-               |          |          
-               |          |--2.17%--0xaaaaca113218
-               |          |          
-               |          |--2.17%--0xaaaaca112cdc
-               |          |          
-               |          |--1.86%--0xaaaaca113130
-               |          |          
-               |          |--1.55%--0xaaaaca111224
-               |          |          
-               |          |--1.24%--0xaaaaca112d70
-               |          |          
-               |          |--0.93%--0xaaaaca113254
-               |          |          |          
-               |          |           --0.62%--0xaaaaca112aac
-               |          |          
-               |          |--0.93%--0xaaaaca113244
-               |          |          |          
-               |          |           --0.62%--0xaaaaca112ad4
-               |          |                     0xffffa2aa343c
-               |          |          
-               |          |--0.93%--0xaaaaca11315c
-               |          |          
-               |          |--0.62%--0xaaaaca113120
-               |          |          
-               |          |--0.62%--0xaaaaca1130dc
-               |          |          
-               |           --0.62%--0xaaaaca112edc
-               |          
-                --6.21%--0xaaaaca11141c
-                          |          
-                          |--1.86%--0xaaaaca118d54
-                          |          
-                          |--1.24%--0xaaaaca118b9c
-                          |          |          
-                          |           --0.62%--0xaaaaca118a10
-                          |          
-                          |--0.62%--0xaaaaca118cec
-                          |          0xaaaaca118a10
-                          |          
-                          |--0.62%--0xaaaaca118cc8
-                          |          
-                           --0.62%--0xaaaaca118ba4
+            ---main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
 
-    93.79%     0.00%  bench    bench              [.] 0x0000aaaaca111518
-            |
-            ---0xaaaaca111518
-               0xaaaaca1137dc
-               |          
-               |--40.37%--0xaaaaca112d5c
-               |          |          
-               |          |--37.27%--0xffffa2ac7c6c
-               |          |          __kernel_clock_gettime
-               |          |          
-               |          |--2.17%--0xffffa2a9a354
-               |          |          
-               |           --0.62%--0xffffa2ac7c98
-               |          
-               |--29.50%--0xaaaaca112cc4
-               |          |          
-               |          |--28.26%--0xffffa2ac7c6c
-               |          |          __kernel_clock_gettime
-               |          |          
-               |           --0.93%--0xffffa2ac7c98
-               |          
-               |--7.14%--0xaaaaca113348
-               |          |          
-               |          |--1.86%--0xaaaaca112884
-               |          |          |          
-               |          |           --1.24%--el0t_64_sync
-               |          |                     el0t_64_sync_handler
-               |          |                     el0_da
-               |          |                     do_mem_abort
-               |          |                     do_translation_fault
-               |          |                     do_page_fault
-               |          |                     handle_mm_fault
-               |          |                     |          
-               |          |                      --0.93%--__handle_mm_fault
-               |          |                                __mem_cgroup_charge
-               |          |                                |          
-               |          |                                 --0.62%--try_charge_memcg
-               |          |          
-               |          |--1.55%--0xffffa28eac80
-               |          |          el0t_64_sync
-               |          |          el0t_64_sync_handler
-               |          |          el0_da
-               |          |          |          
-               |          |           --1.24%--do_mem_abort
-               |          |                     do_translation_fault
-               |          |                     do_page_fault
-               |          |                     handle_mm_fault
-               |          |                     __handle_mm_fault
-               |          |                     |          
-               |          |                      --0.93%--do_huge_pmd_anonymous_page
-               |          |                                __pi_clear_page
-               |          |          
-               |          |--0.93%--0xffffa28eac8c
-               |          |          
-               |          |--0.93%--0xaaaaca1127c4
-               |          |          
-               |          |--0.62%--0xffffa28eac70
-               |          |          el0t_64_sync
-               |          |          el0t_64_sync_handler
-               |          |          el0_da
-               |          |          
-               |           --0.62%--0xaaaaca112948
-               |                     0xffffa2aa343c
-               |                     0xffffa28e0754
-               |                     0xffffa28dfce8
-               |          
-               |--2.17%--0xaaaaca113218
-               |          
-               |--2.17%--0xaaaaca112cdc
-               |          
-               |--1.86%--0xaaaaca113130
-               |          
-               |--1.55%--0xaaaaca111224
-               |          
-               |--1.24%--0xaaaaca112d70
-               |          
-               |--0.93%--0xaaaaca113254
-               |          |          
-               |           --0.62%--0xaaaaca112aac
-               |          
-               |--0.93%--0xaaaaca113244
-               |          |          
-               |           --0.62%--0xaaaaca112ad4
-               |                     0xffffa2aa343c
-               |          
-               |--0.93%--0xaaaaca11315c
-               |          
-               |--0.62%--0xaaaaca113120
-               |          
-               |--0.62%--0xaaaaca1130dc
-               |          
-                --0.62%--0xaaaaca112edc
-
-    93.79%     0.00%  bench    bench              [.] 0x0000aaaaca1137dc
-            |
-            ---0xaaaaca1137dc
-               |          
-               |--40.37%--0xaaaaca112d5c
-               |          |          
-               |          |--37.27%--0xffffa2ac7c6c
-               |          |          __kernel_clock_gettime
-               |          |          
-               |          |--2.17%--0xffffa2a9a354
-               |          |          
-               |           --0.62%--0xffffa2ac7c98
-               |          
-               |--29.50%--0xaaaaca112cc4
-               |          |          
-               |          |--28.26%--0xffffa2ac7c6c
-               |          |          __kernel_clock_gettime
-               |          |          
-               |           --0.93%--0xffffa2ac7c98
-               |          
-               |--7.14%--0xaaaaca113348
-               |          |          
-               |          |--1.86%--0xaaaaca112884
-               |          |          |          
-               |          |           --1.24%--el0t_64_sync
-               |          |                     el0t_64_sync_handler
-               |          |                     el0_da
-               |          |                     do_mem_abort
-               |          |                     do_translation_fault
-               |          |                     do_page_fault
-               |          |                     handle_mm_fault
-               |          |                     |          
-               |          |                      --0.93%--__handle_mm_fault
-               |          |                                __mem_cgroup_charge
-               |          |                                |          
-               |          |                                 --0.62%--try_charge_memcg
-               |          |          
-               |          |--1.55%--0xffffa28eac80
-               |          |          el0t_64_sync
-               |          |          el0t_64_sync_handler
-               |          |          el0_da
-               |          |          |          
-               |          |           --1.24%--do_mem_abort
-               |          |                     do_translation_fault
-               |          |                     do_page_fault
-               |          |                     handle_mm_fault
-               |          |                     __handle_mm_fault
-               |          |                     |          
-               |          |                      --0.93%--do_huge_pmd_anonymous_page
-               |          |                                __pi_clear_page
-               |          |          
-               |          |--0.93%--0xffffa28eac8c
-               |          |          
-               |          |--0.93%--0xaaaaca1127c4
-               |          |          
-               |          |--0.62%--0xffffa28eac70
-               |          |          el0t_64_sync
-               |          |          el0t_64_sync_handler
-               |          |          el0_da
-               |          |          
-               |           --0.62%--0xaaaaca112948
-               |                     0xffffa2aa343c
-               |                     0xffffa28e0754
-               |                     0xffffa28dfce8
-               |          
-               |--2.17%--0xaaaaca113218
-               |          
-               |--2.17%--0xaaaaca112cdc
-               |          
-               |--1.86%--0xaaaaca113130
-               |          
-               |--1.55%--0xaaaaca111224
-               |          
-               |--1.24%--0xaaaaca112d70
-               |          
-               |--0.93%--0xaaaaca113254
-               |          |          
-               |           --0.62%--0xaaaaca112aac
-               |          
-               |--0.93%--0xaaaaca113244
-               |          |          
-               |           --0.62%--0xaaaaca112ad4
-               |                     0xffffa2aa343c
-               |          
-               |--0.93%--0xaaaaca11315c
-               |          
-               |--0.62%--0xaaaaca113120
-               |          
-               |--0.62%--0xaaaaca1130dc
-               |          
-                --0.62%--0xaaaaca112edc
-
-    65.84%    65.84%  bench    [vdso]             [.] __kernel_clock_gettime
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               |          
-               |--37.27%--0xaaaaca112d5c
-               |          0xffffa2ac7c6c
-               |          __kernel_clock_gettime
-               |          
-                --28.26%--0xaaaaca112cc4
-                          0xffffa2ac7c6c
-                          __kernel_clock_gettime
-
-    65.84%     0.00%  bench     (deleted)         [.] 0x0000ffffa2ac7c6c
-            |
-            ---0xffffa2ac7c6c
-               __kernel_clock_gettime
-
-    40.37%     0.00%  bench    bench              [.] 0x0000aaaaca112d5c
-            |
-            ---0xaaaaca112d5c
-               |          
-               |--37.27%--0xffffa2ac7c6c
-               |          __kernel_clock_gettime
-               |          
-               |--2.17%--0xffffa2a9a354
-               |          
-                --0.62%--0xffffa2ac7c98
-
-    29.50%     0.00%  bench    bench              [.] 0x0000aaaaca112cc4
-            |
-            ---0xaaaaca112cc4
-               |          
-               |--28.26%--0xffffa2ac7c6c
-               |          __kernel_clock_gettime
-               |          
-                --0.93%--0xffffa2ac7c98
-
-     7.14%     0.00%  bench    bench              [.] 0x0000aaaaca113348
-            |
-            ---0xaaaaca113348
-               |          
-               |--1.86%--0xaaaaca112884
-               |          |          
-               |           --1.24%--el0t_64_sync
-               |                     el0t_64_sync_handler
-               |                     el0_da
-               |                     do_mem_abort
-               |                     do_translation_fault
-               |                     do_page_fault
-               |                     handle_mm_fault
-               |                     |          
-               |                      --0.93%--__handle_mm_fault
-               |                                __mem_cgroup_charge
-               |                                |          
-               |                                 --0.62%--try_charge_memcg
-               |          
-               |--1.55%--0xffffa28eac80
-               |          el0t_64_sync
-               |          el0t_64_sync_handler
-               |          el0_da
-               |          |          
-               |           --1.24%--do_mem_abort
-               |                     do_translation_fault
-               |                     do_page_fault
-               |                     handle_mm_fault
-               |                     __handle_mm_fault
-               |                     |          
-               |                      --0.93%--do_huge_pmd_anonymous_page
-               |                                __pi_clear_page
-               |          
-               |--0.93%--0xffffa28eac8c
-               |          
-               |--0.93%--0xaaaaca1127c4
-               |          
-               |--0.62%--0xffffa28eac70
-               |          el0t_64_sync
-               |          el0t_64_sync_handler
-               |          el0_da
-               |          
-                --0.62%--0xaaaaca112948
-                          0xffffa2aa343c
-                          0xffffa28e0754
-                          0xffffa28dfce8
-
-     6.21%     0.00%  bench    bench              [.] 0x0000aaaaca11141c
-            |
-            ---0xaaaaca11141c
-               |          
-               |--1.86%--0xaaaaca118d54
-               |          
-               |--1.24%--0xaaaaca118b9c
-               |          |          
-               |           --0.62%--0xaaaaca118a10
-               |          
-               |--0.62%--0xaaaaca118cec
-               |          0xaaaaca118a10
-               |          
-               |--0.62%--0xaaaaca118cc8
-               |          
-                --0.62%--0xaaaaca118ba4
-
-     4.66%     0.00%  bench    [kernel.kallsyms]  [k] el0t_64_sync
-            |
-            ---el0t_64_sync
-               el0t_64_sync_handler
-               |          
-                --4.35%--el0_da
-                          |          
-                           --3.73%--do_mem_abort
-                                     do_translation_fault
-                                     do_page_fault
-                                     handle_mm_fault
-                                     |          
-                                      --3.42%--__handle_mm_fault
-                                                |          
-                                                |--1.86%--do_huge_pmd_anonymous_page
-                                                |          |          
-                                                |           --1.55%--__pi_clear_page
-                                                |          
-                                                 --0.93%--__mem_cgroup_charge
-                                                           |          
-                                                            --0.62%--try_charge_memcg
-
-     4.66%     0.00%  bench    [kernel.kallsyms]  [k] el0t_64_sync_handler
-            |
-            ---el0t_64_sync_handler
-               |          
-                --4.35%--el0_da
-                          |          
-                           --3.73%--do_mem_abort
-                                     do_translation_fault
-                                     do_page_fault
-                                     handle_mm_fault
-                                     |          
-                                      --3.42%--__handle_mm_fault
-                                                |          
-                                                |--1.86%--do_huge_pmd_anonymous_page
-                                                |          |          
-                                                |           --1.55%--__pi_clear_page
-                                                |          
-                                                 --0.93%--__mem_cgroup_charge
-                                                           |          
-                                                            --0.62%--try_charge_memcg
-
-     4.35%     0.62%  bench    [kernel.kallsyms]  [k] el0_da
+     5.67%  [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()                                                                                                                                                                                                                                                                                                                   -      -            
             |          
-            |--3.73%--el0_da
-            |          do_mem_abort
-            |          do_translation_fault
-            |          do_page_fault
-            |          handle_mm_fault
-            |          |          
-            |           --3.42%--__handle_mm_fault
-            |                     |          
-            |                     |--1.86%--do_huge_pmd_anonymous_page
-            |                     |          |          
-            |                     |           --1.55%--__pi_clear_page
-            |                     |          
-            |                      --0.93%--__mem_cgroup_charge
-            |                                |          
-            |                                 --0.62%--try_charge_memcg
+            |--3.49%--ob::make_workload(unsigned long, unsigned int)
+            |          main
+            |          __libc_start_call_main
+            |          __libc_start_main@@GLIBC_2.34
+            |          _start
             |          
-             --0.62%--0xaaaaca111670
-                       0xffffa28774d8
-                       0xffffa2877400
-                       0xaaaaca111518
-                       0xaaaaca1137dc
-                       0xaaaaca113348
+             --1.89%--int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]
+                       ob::make_workload(unsigned long, unsigned int)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
 
-     3.73%     0.31%  bench    [kernel.kallsyms]  [k] handle_mm_fault
+     3.34%  [.] int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]                                -      -            
             |          
-             --3.42%--handle_mm_fault
-                       __handle_mm_fault
-                       |          
-                       |--1.86%--do_huge_pmd_anonymous_page
-                       |          |          
-                       |           --1.55%--__pi_clear_page
-                       |          
-                        --0.93%--__mem_cgroup_charge
-                                  |          
-                                   --0.62%--try_charge_memcg
+             --3.05%--ob::make_workload(unsigned long, unsigned int)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
 
-     3.73%     0.00%  bench    [kernel.kallsyms]  [k] do_mem_abort
+     3.05%  [k] do_user_addr_fault                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
             |
-            ---do_mem_abort
-               do_translation_fault
-               do_page_fault
-               handle_mm_fault
+            ---exc_page_fault
+               asm_exc_page_fault
                |          
-                --3.42%--__handle_mm_fault
-                          |          
-                          |--1.86%--do_huge_pmd_anonymous_page
-                          |          |          
-                          |           --1.55%--__pi_clear_page
-                          |          
-                           --0.93%--__mem_cgroup_charge
-                                     |          
-                                      --0.62%--try_charge_memcg
-
-     3.73%     0.00%  bench    [kernel.kallsyms]  [k] do_translation_fault
-            |
-            ---do_translation_fault
-               do_page_fault
-               handle_mm_fault
-               |          
-                --3.42%--__handle_mm_fault
-                          |          
-                          |--1.86%--do_huge_pmd_anonymous_page
-                          |          |          
-                          |           --1.55%--__pi_clear_page
-                          |          
-                           --0.93%--__mem_cgroup_charge
-                                     |          
-                                      --0.62%--try_charge_memcg
-
-     3.73%     0.00%  bench    [kernel.kallsyms]  [k] do_page_fault
-            |
-            ---do_page_fault
-               handle_mm_fault
-               |          
-                --3.42%--__handle_mm_fault
-                          |          
-                          |--1.86%--do_huge_pmd_anonymous_page
-                          |          |          
-                          |           --1.55%--__pi_clear_page
-                          |          
-                           --0.93%--__mem_cgroup_charge
-                                     |          
-                                      --0.62%--try_charge_memcg
-
-     3.42%     0.00%  bench    [kernel.kallsyms]  [k] __handle_mm_fault
-            |
-            ---__handle_mm_fault
-               |          
-               |--1.86%--do_huge_pmd_anonymous_page
+               |--1.16%--__memmove_avx_unaligned_erms
                |          |          
-               |           --1.55%--__pi_clear_page
+               |           --1.02%--RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+               |                     void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+               |                     main
+               |                     __libc_start_call_main
+               |                     __libc_start_main@@GLIBC_2.34
+               |                     _start
                |          
-                --0.93%--__mem_cgroup_charge
-                          |          
-                           --0.62%--try_charge_memcg
-
-     2.17%     2.17%  bench     (deleted)         [.] 0x000000000009a354
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca112d5c
-               0xffffa2a9a354
-
-     2.17%     2.17%  bench    bench              [.] 0x0000000000002cdc
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca112cdc
-
-     2.17%     2.17%  bench    bench              [.] 0x0000000000003218
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca113218
-
-     2.17%     0.00%  bench     (deleted)         [.] 0x0000ffffa2a9a354
-            |
-            ---0xffffa2a9a354
-
-     2.17%     0.00%  bench    bench              [.] 0x0000aaaaca112cdc
-            |
-            ---0xaaaaca112cdc
-
-     2.17%     0.00%  bench    bench              [.] 0x0000aaaaca113218
-            |
-            ---0xaaaaca113218
-
-     1.86%     1.86%  bench    [kernel.kallsyms]  [k] __pi_clear_page
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
+               |--1.02%--ob::make_workload(unsigned long, unsigned int)
+               |          main
+               |          __libc_start_call_main
+               |          __libc_start_main@@GLIBC_2.34
+               |          _start
                |          
-                --1.55%--0xaaaaca111518
-                          0xaaaaca1137dc
-                          0xaaaaca113348
-                          |          
-                           --0.93%--0xffffa28eac80
-                                     el0t_64_sync
-                                     el0t_64_sync_handler
-                                     el0_da
-                                     do_mem_abort
-                                     do_translation_fault
-                                     do_page_fault
-                                     handle_mm_fault
-                                     __handle_mm_fault
-                                     do_huge_pmd_anonymous_page
-                                     __pi_clear_page
+                --0.73%--std::vector<ob::BookArray::Order, std::allocator<ob::BookArray::Order> >::_M_default_append(unsigned long)
+                          RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+                          void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+                          main
+                          __libc_start_call_main
+                          __libc_start_main@@GLIBC_2.34
+                          _start
 
-     1.86%     0.00%  bench     (deleted)         [.] 0x0000ffffa2aa343c
+     2.47%  [k] clear_page_erms                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -      -            
             |
-            ---0xffffa2aa343c
-               |          
-               |--0.93%--0xffffa28e0754
-               |          0xffffa28dfce8
-               |          |          
-               |           --0.62%--0xffffa28de9f4
-               |                     0xffffa28ddc3c
-               |                     el0t_64_sync
-               |                     el0t_64_sync_handler
-               |                     el0_da
-               |                     do_mem_abort
-               |                     do_translation_fault
-               |                     do_page_fault
-               |                     handle_mm_fault
-               |                     __handle_mm_fault
-               |                     do_huge_pmd_anonymous_page
-               |          
-                --0.62%--0xffffa28e0738
-
-     1.86%     0.00%  bench    bench              [.] 0x0000aaaaca112884
-            |
-            ---0xaaaaca112884
-               |          
-                --1.24%--el0t_64_sync
-                          el0t_64_sync_handler
-                          el0_da
-                          do_mem_abort
-                          do_translation_fault
-                          do_page_fault
-                          handle_mm_fault
-                          |          
-                           --0.93%--__handle_mm_fault
-                                     __mem_cgroup_charge
-                                     |          
-                                      --0.62%--try_charge_memcg
-
-     1.86%     1.86%  bench    bench              [.] 0x0000000000003130
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca113130
-
-     1.86%     1.86%  bench    bench              [.] 0x0000000000008d54
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca11141c
-               0xaaaaca118d54
-
-     1.86%     0.00%  bench    [kernel.kallsyms]  [k] do_huge_pmd_anonymous_page
-            |
-            ---do_huge_pmd_anonymous_page
-               |          
-                --1.55%--__pi_clear_page
-
-     1.86%     0.00%  bench    bench              [.] 0x0000aaaaca113130
-            |
-            ---0xaaaaca113130
-
-     1.86%     0.00%  bench    bench              [.] 0x0000aaaaca118d54
-            |
-            ---0xaaaaca118d54
-
-     1.55%     0.00%  bench     (deleted)         [.] 0x0000ffffa28eac80
-            |
-            ---0xffffa28eac80
-               el0t_64_sync
-               el0t_64_sync_handler
-               el0_da
-               |          
-                --1.24%--do_mem_abort
-                          do_translation_fault
-                          do_page_fault
-                          handle_mm_fault
-                          __handle_mm_fault
-                          |          
-                           --0.93%--do_huge_pmd_anonymous_page
-                                     __pi_clear_page
-
-     1.55%     1.55%  bench     (deleted)         [.] 0x00000000000c7c98
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               |          
-               |--0.93%--0xaaaaca112cc4
-               |          0xffffa2ac7c98
-               |          
-                --0.62%--0xaaaaca112d5c
-                          0xffffa2ac7c98
-
-     1.55%     1.55%  bench    bench              [.] 0x0000000000001224
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca111224
-
-     1.55%     0.00%  bench     (deleted)         [.] 0x0000ffffa2ac7c98
-            |
-            ---0xffffa2ac7c98
-
-     1.55%     0.00%  bench    bench              [.] 0x0000aaaaca111224
-            |
-            ---0xaaaaca111224
-
-     1.24%     1.24%  bench    bench              [.] 0x0000000000002d70
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca112d70
-
-     1.24%     0.00%  bench    bench              [.] 0x0000aaaaca118b9c
-            |
-            ---0xaaaaca118b9c
-               |          
-                --0.62%--0xaaaaca118a10
-
-     1.24%     0.00%  bench    bench              [.] 0x0000aaaaca118a10
-            |
-            ---0xaaaaca118a10
-               |          
-                --0.62%--0xaaaaca1187a8
-
-     1.24%     0.00%  bench    bench              [.] 0x0000aaaaca112d70
-            |
-            ---0xaaaaca112d70
-
-     0.93%     0.31%  bench    [kernel.kallsyms]  [k] __mem_cgroup_charge
-            |          
-             --0.62%--__mem_cgroup_charge
-                       try_charge_memcg
-
-     0.93%     0.00%  bench     (deleted)         [.] 0x0000ffffa28e0754
-            |
-            ---0xffffa28e0754
-               0xffffa28dfce8
-               |          
-                --0.62%--0xffffa28de9f4
-                          0xffffa28ddc3c
-                          el0t_64_sync
-                          el0t_64_sync_handler
-                          el0_da
-                          do_mem_abort
-                          do_translation_fault
-                          do_page_fault
-                          handle_mm_fault
-                          __handle_mm_fault
-                          do_huge_pmd_anonymous_page
-
-     0.93%     0.00%  bench     (deleted)         [.] 0x0000ffffa28dfce8
-            |
-            ---0xffffa28dfce8
-               |          
-                --0.62%--0xffffa28de9f4
-                          0xffffa28ddc3c
-                          el0t_64_sync
-                          el0t_64_sync_handler
-                          el0_da
-                          do_mem_abort
-                          do_translation_fault
-                          do_page_fault
-                          handle_mm_fault
-                          __handle_mm_fault
-                          do_huge_pmd_anonymous_page
-
-     0.93%     0.93%  bench     (deleted)         [.] 0x000000000009ac8c
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca113348
-               0xffffa28eac8c
-
-     0.93%     0.93%  bench    bench              [.] 0x00000000000027c4
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca113348
-               0xaaaaca1127c4
-
-     0.93%     0.93%  bench    bench              [.] 0x000000000000315c
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca11315c
-
-     0.93%     0.00%  bench    bench              [.] 0x0000aaaaca113244
-            |
-            ---0xaaaaca113244
-               |          
-                --0.62%--0xaaaaca112ad4
-                          0xffffa2aa343c
-
-     0.93%     0.00%  bench    bench              [.] 0x0000aaaaca113254
-            |
-            ---0xaaaaca113254
-               |          
-                --0.62%--0xaaaaca112aac
-
-     0.93%     0.00%  bench    bench              [.] 0x0000aaaaca112ad4
-            |
-            ---0xaaaaca112ad4
-               0xffffa2aa343c
-               |          
-                --0.62%--0xffffa28e0738
-
-     0.93%     0.00%  bench     (deleted)         [.] 0x0000ffffa28eac8c
-            |
-            ---0xffffa28eac8c
-
-     0.93%     0.00%  bench    bench              [.] 0x0000aaaaca1127c4
-            |
-            ---0xaaaaca1127c4
-
-     0.93%     0.00%  bench    bench              [.] 0x0000aaaaca11315c
-            |
-            ---0xaaaaca11315c
-
-     0.62%     0.62%  bench    [kernel.kallsyms]  [k] try_charge_memcg
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca113348
-               0xaaaaca112884
-               el0t_64_sync
-               el0t_64_sync_handler
-               el0_da
-               do_mem_abort
-               do_translation_fault
-               do_page_fault
-               handle_mm_fault
+            ---get_page_from_freelist
+               __alloc_pages
+               alloc_pages_mpol
+               vma_alloc_folio
+               alloc_anon_folio
+               do_anonymous_page
+               handle_pte_fault
                __handle_mm_fault
-               __mem_cgroup_charge
-               try_charge_memcg
-
-     0.62%     0.00%  bench    bench              [.] 0x0000aaaaca112948
-            |
-            ---0xaaaaca112948
-               0xffffa2aa343c
-               0xffffa28e0754
-               0xffffa28dfce8
-
-     0.62%     0.00%  bench     (deleted)         [.] 0x0000ffffa28de9f4
-            |
-            ---0xffffa28de9f4
-               0xffffa28ddc3c
-               el0t_64_sync
-               el0t_64_sync_handler
-               el0_da
-               do_mem_abort
-               do_translation_fault
-               do_page_fault
                handle_mm_fault
-               __handle_mm_fault
-               do_huge_pmd_anonymous_page
+               do_user_addr_fault
+               exc_page_fault
+               asm_exc_page_fault
+               |          
+                --1.89%--__memmove_avx_unaligned_erms
+                          |          
+                           --1.60%--RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+                                     void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+                                     main
+                                     __libc_start_call_main
+                                     __libc_start_main@@GLIBC_2.34
+                                     _start
 
-     0.62%     0.00%  bench     (deleted)         [.] 0x0000ffffa28ddc3c
+     2.47%  [.] std::chrono::_V2::steady_clock::now()                                                                                                                                                                                                                                                                                                                                                                                                                                                              -      -            
+            |          
+             --2.18%--RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+                       void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     2.47%  [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()                                                                                                                                                                                                                                                                                                                  -      -            
+            |          
+             --2.33%--int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]
+                       ob::make_workload(unsigned long, unsigned int)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     2.03%  [.] __memmove_avx_unaligned_erms                                                                                                                                                                                                                                                                                                                                                                                                                                                                       -      -            
+            |          
+             --1.89%--RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+                       void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     1.45%  [k] __handle_mm_fault                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -            
             |
-            ---0xffffa28ddc3c
-               el0t_64_sync
-               el0t_64_sync_handler
-               el0_da
-               do_mem_abort
-               do_translation_fault
-               do_page_fault
+            ---handle_mm_fault
+               do_user_addr_fault
+               exc_page_fault
+               asm_exc_page_fault
+               |          
+                --0.73%--__memmove_avx_unaligned_erms
+                          |          
+                           --0.58%--RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+                                     void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+                                     main
+                                     __libc_start_call_main
+                                     __libc_start_main@@GLIBC_2.34
+                                     _start
+
+     1.16%  [k] _raw_spin_unlock_irqrestore                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -            
+            |          
+             --0.73%--release_pages
+                       free_pages_and_swap_cache
+                       tlb_batch_pages_flush
+                       tlb_finish_mmu
+                       unmap_region
+                       do_vmi_align_munmap
+                       do_vmi_munmap
+                       __vm_munmap
+                       __x64_sys_munmap
+                       x64_sys_call
+                       do_syscall_64
+                       entry_SYSCALL_64_after_hwframe
+                       __munmap
+
+     1.16%  [.] 0x0000000000000b88                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+            |
+            ---clock_gettime@@GLIBC_2.17
+               std::chrono::_V2::steady_clock::now()
+               RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+               void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+     1.02%  [k] zap_pte_range                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      -      -            
+            |
+            ---zap_pmd_range.isra.0
+               unmap_page_range
+               unmap_single_vma
+               unmap_vmas
+               unmap_region
+               do_vmi_align_munmap
+               do_vmi_munmap
+               __vm_munmap
+               __x64_sys_munmap
+               x64_sys_call
+               do_syscall_64
+               entry_SYSCALL_64_after_hwframe
+               __munmap
+               |          
+                --0.58%--main
+                          __libc_start_call_main
+                          __libc_start_main@@GLIBC_2.34
+                          _start
+
+     0.87%  [k] handle_mm_fault                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -      -            
+            |
+            ---do_user_addr_fault
+               exc_page_fault
+               asm_exc_page_fault
+
+     0.87%  [.] std::vector<ob::BookArray::Order, std::allocator<ob::BookArray::Order> >::_M_default_append(unsigned long)                                                                                                                                                                                                                                                                                                                                                                                         -      -            
+            |
+            ---RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+               void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
+
+     0.73%  [k] __alloc_pages                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      -      -            
+            |
+            ---alloc_pages_mpol
+               vma_alloc_folio
+               alloc_anon_folio
+               do_anonymous_page
+               handle_pte_fault
+               __handle_mm_fault
                handle_mm_fault
+               do_user_addr_fault
+               exc_page_fault
+               asm_exc_page_fault
+
+     0.73%  [k] do_anonymous_page                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -            
+            |
+            ---handle_pte_fault
                __handle_mm_fault
-               do_huge_pmd_anonymous_page
+               handle_mm_fault
+               do_user_addr_fault
+               exc_page_fault
+               asm_exc_page_fault
 
-     0.62%     0.00%  bench     (deleted)         [.] 0x0000ffffa28eac70
+     0.73%  [.] 0x0000000000000b7a                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
             |
-            ---0xffffa28eac70
-               el0t_64_sync
-               el0t_64_sync_handler
-               el0_da
+            ---clock_gettime@@GLIBC_2.17
+               std::chrono::_V2::steady_clock::now()
+               RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+               void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
 
-     0.62%     0.62%  bench     (deleted)         [.] 0x000000000008deb0
+     0.58%  [k] get_vma_policy                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     -      -            
             |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
+            ---vma_alloc_folio
+               alloc_anon_folio
+               do_anonymous_page
+               handle_pte_fault
+               __handle_mm_fault
+               handle_mm_fault
+               do_user_addr_fault
+               exc_page_fault
+               asm_exc_page_fault
 
-     0.62%     0.62%  bench     (deleted)         [.] 0x0000000000090738
+     0.58%  [.] 0x0000000000000b68                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
             |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
+            ---clock_gettime@@GLIBC_2.17
+               std::chrono::_V2::steady_clock::now()
+               RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+               void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
 
-     0.62%     0.62%  bench     (deleted)         [.] 0x00000000000b4898
+     0.58%  [.] 0x0000000000000ba1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
             |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
+            ---clock_gettime@@GLIBC_2.17
+               std::chrono::_V2::steady_clock::now()
+               RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+               void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
 
-     0.62%     0.62%  bench    bench              [.] 0x0000000000002884
+     0.58%  [.] 0x0000000000000bcd                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
             |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca113348
-               0xaaaaca112884
+            ---clock_gettime@@GLIBC_2.17
+               std::chrono::_V2::steady_clock::now()
+               RunResult run_once<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&)
+               void bench_impl<ob::BookArray>(std::vector<ob::Op, std::allocator<ob::Op> > const&, int, char const*)
+               main
+               __libc_start_call_main
+               __libc_start_main@@GLIBC_2.34
+               _start
 
-     0.62%     0.62%  bench    bench              [.] 0x00000000000087a8
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca11141c
-
-     0.62%     0.62%  bench    bench              [.] 0x0000000000002edc
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca112edc
-
-     0.62%     0.62%  bench    bench              [.] 0x00000000000030dc
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca1130dc
-
-     0.62%     0.62%  bench    bench              [.] 0x0000000000003120
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca111518
-               0xaaaaca1137dc
-               0xaaaaca113120
-
-     0.62%     0.62%  bench    bench              [.] 0x0000000000008ba4
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca11141c
-               0xaaaaca118ba4
-
-     0.62%     0.62%  bench    bench              [.] 0x0000000000008cc8
-            |
-            ---0xaaaaca111670
-               0xffffa28774d8
-               0xffffa2877400
-               0xaaaaca11141c
-               0xaaaaca118cc8
-
-     0.62%     0.00%  bench    bench              [.] 0x0000aaaaca112aac
-            |
-            ---0xaaaaca112aac
-
-     0.62%     0.00%  bench    bench              [.] 0x0000aaaaca118cec
-            |
-            ---0xaaaaca118cec
-               0xaaaaca118a10
-
-     0.62%     0.00%  bench     (deleted)         [.] 0x0000ffffa28e0bd4
-            |
-            ---0xffffa28e0bd4
-               0xffffa28ddeb0
-
-     0.62%     0.00%  bench     (deleted)         [.] 0x0000ffffa28ddeb0
-            |
-            ---0xffffa28ddeb0
-
-     0.62%     0.00%  bench     (deleted)         [.] 0x0000ffffa28e0738
-            |
-            ---0xffffa28e0738
-
-     0.62%     0.00%  bench     (deleted)         [.] 0x0000ffffa2904898
-            |
-            ---0xffffa2904898
-
-     0.62%     0.00%  bench    bench              [.] 0x0000aaaaca112edc
-            |
-            ---0xaaaaca112edc
-
-     0.62%     0.00%  bench    bench              [.] 0x0000aaaaca1130dc
-            |
-            ---0xaaaaca1130dc
-
-     0.62%     0.00%  bench    bench              [.] 0x0000aaaaca113120
-            |
-            ---0xaaaaca113120
-
-     0.62%     0.00%  bench    bench              [.] 0x0000aaaaca1187a8
-            |
-            ---0xaaaaca1187a8
-
-     0.62%     0.00%  bench    bench              [.] 0x0000aaaaca118ba4
-            |
-            ---0xaaaaca118ba4
-
-     0.62%     0.00%  bench    bench              [.] 0x0000aaaaca118cc8
-            |
-            ---0xaaaaca118cc8
-
-     0.31%     0.31%  bench    [kernel.kallsyms]  [k] sized_strscpy
-     0.31%     0.31%  bench    [kernel.kallsyms]  [k] folios_put_refs
-     0.31%     0.31%  bench    [kernel.kallsyms]  [k] __mod_memcg_lruvec_state
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca118db0
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca112740
-     0.31%     0.00%  bench     (deleted)         [.] 0x0000ffffa28dec4c
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca11287c
-     0.31%     0.00%  bench     (deleted)         [.] 0x0000ffffa28ddd68
-     0.31%     0.31%  bench     (deleted)         [.] 0x00000000000905a8
-     0.31%     0.00%  bench     (deleted)         [.] 0x0000ffffa2931b8c
-     0.31%     0.31%  bench     (deleted)         [.] 0x0000000000090ba0
-     0.31%     0.31%  bench     (deleted)         [.] 0x000000000009ac94
-     0.31%     0.31%  bench    bench              [.] 0x0000000000002a24
-     0.31%     0.31%  bench    bench              [.] 0x00000000000087b0
-     0.31%     0.31%  bench    bench              [.] 0x000000000000883c
-     0.31%     0.31%  bench    bench              [.] 0x0000000000008840
-     0.31%     0.31%  bench    bench              [.] 0x000000000000122c
-     0.31%     0.31%  bench    bench              [.] 0x0000000000002d18
-     0.31%     0.31%  bench    bench              [.] 0x0000000000002d20
-     0.31%     0.31%  bench    bench              [.] 0x0000000000002d58
-     0.31%     0.31%  bench    bench              [.] 0x0000000000002d6c
-     0.31%     0.31%  bench    bench              [.] 0x0000000000002f64
-     0.31%     0.31%  bench    bench              [.] 0x0000000000003020
-     0.31%     0.31%  bench    bench              [.] 0x0000000000003118
-     0.31%     0.31%  bench    bench              [.] 0x0000000000008888
-     0.31%     0.31%  bench    bench              [.] 0x0000000000008a54
-     0.31%     0.00%  bench    [kernel.kallsyms]  [k] el0_svc
-     0.31%     0.31%  bench    bench              [.] 0x0000000000008c7c
-     0.31%     0.31%  bench    bench              [.] 0x0000000000008d28
-     0.31%     0.00%  bench    [kernel.kallsyms]  [k] do_el0_svc
-     0.31%     0.00%  bench    [kernel.kallsyms]  [k] folio_add_lru_vma
-     0.31%     0.00%  bench    [kernel.kallsyms]  [k] invoke_syscall.constprop.0
-     0.31%     0.00%  bench    [kernel.kallsyms]  [k] __arm64_sys_brk
-     0.31%     0.00%  bench    [kernel.kallsyms]  [k] folio_add_lru
-     0.31%     0.00%  bench    [kernel.kallsyms]  [k] folio_add_new_anon_rmap
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca113068
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca113080
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca118bd0
-     0.31%     0.00%  bench    [kernel.kallsyms]  [k] __alloc_pages_noprof
-     0.31%     0.00%  bench    [kernel.kallsyms]  [k] __lruvec_stat_mod_folio
-     0.31%     0.00%  bench    [kernel.kallsyms]  [k] do_brk_flags
-     0.31%     0.00%  bench    [kernel.kallsyms]  [k] folio_batch_move_lru
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca118928
-     0.31%     0.00%  bench     (deleted)         [.] 0x0000ffffa28e05a8
-     0.31%     0.00%  bench     (deleted)         [.] 0x0000ffffa28e0ba0
-     0.31%     0.00%  bench     (deleted)         [.] 0x0000ffffa28eac94
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca11122c
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca112a24
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca112d18
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca112d20
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca112d58
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca112d6c
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca112f64
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca113020
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca113118
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca1187b0
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca11883c
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca118840
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca118888
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca118a54
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca118c7c
-     0.31%     0.00%  bench    bench              [.] 0x0000aaaaca118d28
+     0.44%  [.] clock_gettime@@GLIBC_2.17                                                                                                                                                                                                                                                                                                                                                                                                                                                                          -      -            
+     0.44%  [k] handle_pte_fault                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   -      -            
+     0.44%  [k] rmqueue                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -      -            
+     0.44%  [.] 0x0000000000000af6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.44%  [.] 0x0000000000000b25                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.44%  [.] 0x0000000000000b65                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.44%  [.] 0x0000000000000b6c                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.44%  [.] 0x0000000000000b9b                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.44%  [.] 0x0000000000000bde                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.29%  [k] __lruvec_stat_mod_folio                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -      -            
+     0.29%  [k] __mem_cgroup_charge                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -      -            
+     0.29%  [k] __rmqueue_pcplist                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -            
+     0.29%  [k] blk_cgroup_congested                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -      -            
+     0.29%  [.] do_lookup_x                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -            
+     0.29%  [k] down_read_trylock                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -            
+     0.29%  [k] free_unref_page_list                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -      -            
+     0.29%  [.] malloc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -            
+     0.29%  [k] mas_walk                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           -      -            
+     0.29%  [k] mem_cgroup_commit_charge                                                                                                                                                                                                                                                                                                                                                                                                                                                                           -      -            
+     0.29%  [k] pte_offset_map_nolock                                                                                                                                                                                                                                                                                                                                                                                                                                                                              -      -            
+     0.29%  [k] set_ptes.constprop.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -      -            
+     0.29%  [k] should_fail_alloc_page                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -            
+     0.29%  [.] std::chrono::_V2::steady_clock::now()@plt                                                                                                                                                                                                                                                                                                                                                                                                                                                          -      -            
+     0.29%  [.] void std::vector<ob::Level, std::allocator<ob::Level> >::_M_realloc_insert<ob::Level>(__gnu_cxx::__normal_iterator<ob::Level*, std::vector<ob::Level, std::allocator<ob::Level> > >, ob::Level&&)                                                                                                                                                                                                                                                                                                  -      -            
+     0.29%  [.] 0x0000000000000b62                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.29%  [.] 0x0000000000000b81                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.15%  [k] __cond_resched                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     -      -            
+     0.15%  [k] __mod_memcg_lruvec_state                                                                                                                                                                                                                                                                                                                                                                                                                                                                           -      -            
+     0.15%  [k] __mod_node_page_state                                                                                                                                                                                                                                                                                                                                                                                                                                                                              -      -            
+     0.15%  [k] __pte_offset_map                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   -      -            
+     0.15%  [k] __pte_offset_map_lock                                                                                                                                                                                                                                                                                                                                                                                                                                                                              -      -            
+     0.15%  [k] __raw_callee_save___pv_queued_spin_unlock                                                                                                                                                                                                                                                                                                                                                                                                                                                          -      -            
+     0.15%  [k] _raw_spin_trylock                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -            
+     0.15%  [k] arch_enter_lazy_mmu_mode                                                                                                                                                                                                                                                                                                                                                                                                                                                                           -      -            
+     0.15%  [.] cfree@GLIBC_2.2.5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -            
+     0.15%  [.] clock_gettime@plt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -            
+     0.15%  [k] exc_page_fault                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     -      -            
+     0.15%  [k] folio_add_lru_vma                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  -      -            
+     0.15%  [k] free_unref_page_prepare                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -      -            
+     0.15%  [k] get_page_from_freelist                                                                                                                                                                                                                                                                                                                                                                                                                                                                             -      -            
+     0.15%  [k] kthread_blkcg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      -      -            
+     0.15%  [k] lock_vma_under_rcu                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.15%  [.] malloc@plt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         -      -            
+     0.15%  [k] mem_cgroup_from_task                                                                                                                                                                                                                                                                                                                                                                                                                                                                               -      -            
+     0.15%  [.] memmove@plt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -            
+     0.15%  [.] operator new(unsigned long)@plt                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -      -            
+     0.15%  [k] page_counter_try_charge                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -      -            
+     0.15%  [k] page_mapcount                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      -      -            
+     0.15%  [k] post_alloc_hook                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -      -            
+     0.15%  [k] pte_mkwrite                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -            
+     0.15%  [k] queued_spin_unlock                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.15%  [k] srso_alias_return_thunk                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -      -            
+     0.15%  [.] unsigned long std::uniform_int_distribution<unsigned long>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<unsigned long>::param_type const&) [clone .isra.0]  -      -            
+     0.15%  [k] vm_area_free                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       -      -            
+     0.15%  [k] vm_normal_page                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     -      -            
+     0.15%  [.] 0x0000000000000af1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.15%  [.] 0x0000000000000b04                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.15%  [.] 0x0000000000000b07                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.15%  [.] 0x0000000000000b3c                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.15%  [.] 0x0000000000000b42                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
+     0.15%  [.] 0x0000000000000b53                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -      -            
 
 
 #

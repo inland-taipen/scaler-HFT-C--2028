@@ -40,9 +40,9 @@ This document outlines the key design decisions, trade-offs, and constraints con
 
 **Context:** This design optimizes for the absolute fastest hot path with zero heap allocations.
 **Trade-offs:**
-*   **Pros:** O(1) lookups. No `malloc` on the hot path. Contiguous memory fits entirely in L2 cache. Extremely fast `add` and `cancel` (4x to 10x faster than A).
-*   **Cons (The Rescan Problem):** When the last order at the *best* price is cancelled, we must find the next best price. I implemented a linear `while` loop for this. In a thin book, this is O(N) and could cause a tail-latency spike. 
-*   **Future Optimization:** A two-level bitmap (bitset) tracking non-zero levels would make the rescan O(1) using `std::countr_zero`.
+*   **Pros:** O(1) add, cancel and BBO. The level array is fixed (about 80 KB) and contiguous. No hashing or tree walks.
+*   **Cons:** `ord_` grows with `resize(id + 1)`, so it does allocate and copy on the hot path when it reallocates (visible as page faults, see REPORT 3.4), and its size follows the largest id rather than the number of live orders. When the best level empties, a linear rescan finds the next one.
+*   **Future:** reserve or pool the order storage; replace the rescan with a bitmap of non-empty ticks.
 
 ## D6: Benchmarking Methodology
 **Decision:** Pre-generate 1,000,000 operations into a `std::vector<Op>` before timing. Use C++ templates for the interface instead of virtual functions.

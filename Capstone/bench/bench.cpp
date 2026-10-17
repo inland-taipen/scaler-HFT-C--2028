@@ -1,8 +1,9 @@
 #include "types.hpp"
 #include "book_map.hpp"
 #include "book_vec.hpp"
-#include "workload.hpp"
 #include "book_array.hpp"
+#include "workload.hpp"
+
 #include <chrono>
 #include <cstdio>
 #include <cstring>
@@ -19,6 +20,7 @@ struct RunResult {
     double ns_cancel;
     double ns_bbo;
     double ns_depth;
+    double total_ms;      // wall time of the whole op loop (includes timer overhead)
     long long checksum;
     BBO final_bbo;
 };
@@ -31,6 +33,8 @@ RunResult run_once(const std::vector<Op>& ops) {
     uint64_t add_n  = 0, cancel_n  = 0, bbo_n  = 0, depth_n  = 0;
     long long checksum = 0;
     BBO final_bbo{};
+
+    auto run_start = Clock::now();
 
     for (const Op& op : ops) {
         auto t0 = Clock::now();
@@ -69,11 +73,14 @@ RunResult run_once(const std::vector<Op>& ops) {
         }
     }
 
+    auto run_end = Clock::now();
+
     RunResult r{};
     r.ns_add    = add_n    ? (double)add_ns    / add_n    : 0.0;
     r.ns_cancel = cancel_n ? (double)cancel_ns / cancel_n : 0.0;
     r.ns_bbo    = bbo_n    ? (double)bbo_ns    / bbo_n    : 0.0;
     r.ns_depth  = depth_n  ? (double)depth_ns  / depth_n  : 0.0;
+    r.total_ms  = std::chrono::duration<double, std::milli>(run_end - run_start).count();
     r.checksum  = checksum;
     r.final_bbo = final_bbo;
     return r;
@@ -87,7 +94,7 @@ static double median(std::vector<double> v) {
 
 template <class Book>
 void bench_impl(const std::vector<Op>& ops, int runs, const char* name) {
-    std::vector<double> a, c, b, d;
+    std::vector<double> a, c, b, d, t;
     RunResult last{};
 
     for (int i = 0; i < runs; ++i) {
@@ -96,24 +103,75 @@ void bench_impl(const std::vector<Op>& ops, int runs, const char* name) {
         c.push_back(last.ns_cancel);
         b.push_back(last.ns_bbo);
         d.push_back(last.ns_depth);
+        t.push_back(last.total_ms);
     }
 
-    std::printf("impl=%s runs=%d\n", name, runs);
+    std::printf("impl=%s runs=%d ops=%zu (median of runs)\n", name, runs, ops.size());
+    std::printf("  total_ms  %.1f\n", median(t));
     std::printf("  ns/add    %.1f\n", median(a));
     std::printf("  ns/cancel %.1f\n", median(c));
     std::printf("  ns/bbo    %.1f\n", median(b));
     std::printf("  ns/depth  %.1f\n", median(d));
-    std::printf("  final bid: has=%d px=%d qty=%lld\n",
+    std::printf("  final bid: has=%d px=%.2f qty=%lld\n",
                 last.final_bbo.has_bid,
-                last.final_bbo.bid_price,
+                to_price(last.final_bbo.bid_price),
                 (long long)last.final_bbo.bid_qty);
-    std::printf("  final ask: has=%d px=%d qty=%lld\n",
+    std::printf("  final ask: has=%d px=%.2f qty=%lld\n",
                 last.final_bbo.has_ask,
-                last.final_bbo.ask_price,
+                to_price(last.final_bbo.ask_price),
                 (long long)last.final_bbo.ask_qty);
     std::printf("  checksum %lld\n", last.checksum);
 }
 
+// Explicit checks for the required behaviours the random workload never hits:
+// empty book, unknown/double cancel, insufficient depth, best level emptying.
+template <class Book>
+bool edge_tests(const char* name) {
+    Book b;
+    bool ok = true;
+    auto check = [&](bool cond, const char* what) {
+        if (!cond) {
+            std::printf("  [%s] FAILED: %s\n", name, what);
+            ok = false;
+        }
+    };
+
+    BBO e = b.get_bbo();
+    check(!e.has_bid && !e.has_ask, "empty book BBO has no bid/ask");
+    check(b.get_bids(10).empty() && b.get_asks(10).empty(), "empty book depth is empty");
+    check(!b.cancel_order(12345), "cancel unknown id returns false");
+
+    b.add_order(1, Side::Buy,  9000,  10);
+    b.add_order(2, Side::Buy,  9001,  20);
+    b.add_order(3, Side::Buy,  9002,  30);
+    b.add_order(4, Side::Buy,  9002,   5);   // same price -> quantities add up
+    b.add_order(5, Side::Sell, 10050,  7);
+
+    std::vector<Level> bids = b.get_bids(10);
+    check(bids.size() == 3, "get_bids(10) with 3 levels returns 3");
+    check(bids.size() == 3 && bids[0].price == 9002 && bids[0].qty == 35,
+          "best bid first and same-price qty aggregated");
+    check(b.get_asks(10).size() == 1, "get_asks(10) with 1 level returns 1");
+
+    check(b.cancel_order(2), "cancel live order returns true");
+    check(!b.cancel_order(2), "cancel already-cancelled order returns false");
+
+    // Empty the best bid level completely; BBO must move to the next level.
+    check(b.cancel_order(3) && b.cancel_order(4), "cancel both orders at best bid");
+    BBO m = b.get_bbo();
+    check(m.has_bid && m.bid_price == 9000 && m.bid_qty == 10,
+          "BBO moves to next level after best level emptied");
+
+    check(b.cancel_order(1) && b.cancel_order(5), "cancel remaining orders");
+    BBO z = b.get_bbo();
+    check(!z.has_bid && !z.has_ask, "book is empty again after all cancels");
+
+    std::printf("  edge cases %s: %s\n", name, ok ? "PASS" : "FAIL");
+    return ok;
+}
+
+// Runs the same workload through two books and compares BBO, top-10 bids/asks
+// and cancel return values after every single operation.
 template <class BookA, class BookB>
 bool verify_pair(const std::vector<Op>& ops, const char* nameA, const char* nameB) {
     BookA a;
@@ -127,57 +185,37 @@ bool verify_pair(const std::vector<Op>& ops, const char* nameA, const char* name
                 a.add_order(op.id, op.side, op.price, op.qty);
                 b.add_order(op.id, op.side, op.price, op.qty);
                 break;
-
             case OpType::Cancel: {
                 bool ra = a.cancel_order(op.id);
                 bool rb = b.cancel_order(op.id);
                 if (ra != rb) {
-                    std::printf("MISMATCH cancel return at op %zu (id=%llu): %s=%d %s=%d\n",
+                    std::printf("  MISMATCH cancel return at op %zu (id=%llu): %s=%d %s=%d\n",
                                 i, (unsigned long long)op.id, nameA, ra, nameB, rb);
                     return false;
                 }
                 break;
             }
-
             case OpType::Bbo:
-                break;   // covered by the post-op check below
-
             case OpType::Depth:
-                break;   // covered by the post-op check below
+                break;   // state is compared below for every op anyway
         }
 
-        BBO ba = a.get_bbo();
-        BBO bb = b.get_bbo();
-        if (!(ba == bb)) {
-            std::printf("MISMATCH bbo after op %zu (type=%d id=%llu)\n",
+        if (!(a.get_bbo() == b.get_bbo())) {
+            std::printf("  MISMATCH bbo after op %zu (type=%d id=%llu)\n",
                         i, (int)op.type, (unsigned long long)op.id);
-            std::printf("  %s: has_bid=%d bid=%d x %lld  has_ask=%d ask=%d x %lld\n",
-                        nameA, ba.has_bid, ba.bid_price, (long long)ba.bid_qty,
-                        ba.has_ask, ba.ask_price, (long long)ba.ask_qty);
-            std::printf("  %s: has_bid=%d bid=%d x %lld  has_ask=%d ask=%d x %lld\n",
-                        nameB, bb.has_bid, bb.bid_price, (long long)bb.bid_qty,
-                        bb.has_ask, bb.ask_price, (long long)bb.ask_qty);
             return false;
         }
-
-        std::vector<Level> ba_bids = a.get_bids(10);
-        std::vector<Level> bb_bids = b.get_bids(10);
-        if (ba_bids != bb_bids) {
-            std::printf("MISMATCH get_bids(10) after op %zu (type=%d)\n",
-                        i, (int)op.type);
+        if (a.get_bids(10) != b.get_bids(10)) {
+            std::printf("  MISMATCH get_bids(10) after op %zu (type=%d)\n", i, (int)op.type);
             return false;
         }
-
-        std::vector<Level> ba_asks = a.get_asks(10);
-        std::vector<Level> bb_asks = b.get_asks(10);
-        if (ba_asks != bb_asks) {
-            std::printf("MISMATCH get_asks(10) after op %zu (type=%d)\n",
-                        i, (int)op.type);
+        if (a.get_asks(10) != b.get_asks(10)) {
+            std::printf("  MISMATCH get_asks(10) after op %zu (type=%d)\n", i, (int)op.type);
             return false;
         }
     }
 
-    std::printf("verify %s vs %s: PASS\n", nameA, nameB);
+    std::printf("  workload %s vs %s: PASS (%zu ops)\n", nameA, nameB, ops.size());
     return true;
 }
 
@@ -194,14 +232,32 @@ int main(int argc, char** argv) {
         else if (!std::strcmp(argv[i], "--seed") && i + 1 < argc) seed = (uint32_t)std::atoi(argv[++i]);
         else if (!std::strcmp(argv[i], "--verify")) verify = true;
     }
+    if (runs < 1) runs = 1;
 
     if (verify) {
-        auto ops = make_workload(100'000, seed);
-        bool ok = true;
-        ok &= verify_pair<BookMap, BookVec>(ops, "A", "B");
-        ok &= verify_pair<BookMap, BookArray>(ops, "A", "C");
-        ok &= verify_pair<BookVec, BookArray>(ops, "B", "C"); 
-        return ok ? 0 : 1;
+        std::printf("Running correctness test (seed=%u, %zu ops)...\n\n", seed, n);
+
+        bool eA = edge_tests<BookMap>("A");
+        bool eB = edge_tests<BookVec>("B");
+        bool eC = edge_tests<BookArray>("C");
+
+        auto ops = make_workload(n, seed);
+        bool ab = verify_pair<BookMap, BookVec>(ops, "A", "B");
+        bool ac = verify_pair<BookMap, BookArray>(ops, "A", "C");
+        bool bc = verify_pair<BookVec, BookArray>(ops, "B", "C");
+
+        bool okA = eA && ab && ac;
+        bool okB = eB && ab && bc;
+        bool okC = eC && ac && bc;
+
+        std::printf("\nImplementation A: %s\n", okA ? "PASS" : "FAIL");
+        std::printf("Implementation B: %s\n", okB ? "PASS" : "FAIL");
+        std::printf("Implementation C: %s\n", okC ? "PASS" : "FAIL");
+
+        bool all = okA && okB && okC;
+        std::printf("\n%s\n", all ? "All implementations produce identical results."
+                                  : "Implementations DISAGREE - see mismatches above.");
+        return all ? 0 : 1;
     }
 
     auto ops = make_workload(n, seed);
@@ -210,7 +266,7 @@ int main(int argc, char** argv) {
     else if (impl == "B") bench_impl<BookVec>(ops, runs, "B");
     else if (impl == "C") bench_impl<BookArray>(ops, runs, "C");
     else {
-        std::fprintf(stderr, "unknown impl: %s\n", impl.c_str());
+        std::fprintf(stderr, "unknown impl: %s (use A, B or C)\n", impl.c_str());
         return 1;
     }
     return 0;
